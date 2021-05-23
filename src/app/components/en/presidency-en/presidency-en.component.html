@@ -1,0 +1,147 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+<header>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" *ngIf="president.img_slider_one != null">
+
+
+                <div class="background" style="background: url({{president.img_slider_one}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="carousel-item" *ngIf="president.img_slider_two != null">
+
+                <div class="background" style="background: url({{president.img_slider_two}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-item" *ngIf="president.img_slider_three != null">
+
+                <div class="background" style="background: url({{president.img_slider_three}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-item" *ngIf="president.img_slider_four != null">
+
+                <div class="background" style="background: url({{president.img_slider_four}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-item" *ngIf="president.img_slider_five != null">
+
+                <div class="background" style="background: url({{president.img_slider_five}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-item" *ngIf="president.img_slider_six != null">
+
+                <div class="background" style="background: url({{president.img_slider_six}});     background-size: cover;
+            background-repeat: no-repeat;"></div>
+                <div class="mask">
+                    <div class="container">
+                        <div class="context typewriter">
+                            <h1><span>Presidency</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div class="arrow"></div>
+
+
+</header>
+
+
+
+<div class="presidency">
+    <div class="container">
+        <img src="{{president.image}}" alt="">
+
+        <h3>​​President of AUT</h3>
+
+        <h3 style="margin-top: -5px;">{{president.name_english}}</h3>
+
+        <p>{{president.paragraph_english}}</p>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="staff">
+    <div class="container">
+        <h2>President Office Staff</h2>
+        <hr>
+
+        <div class="pictures">
+            <div class="row">
+                <div class="col-md-6 pic" *ngFor="let staff of staff">
+                    <img *ngIf="staff.staffurl == 'nostaff'" src="{{staff.image}}" alt="">
+                    <img *ngIf="staff.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/en/staff/{{staff.staffurl}}" src="{{staff.image}}" alt="">
+                   
+                    <h4>{{staff.name_english}}</h4>
+                    <h4>{{staff.postion_english}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<app-footer-en></app-footer-en>

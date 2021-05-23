@@ -1,0 +1,109 @@
+<app-navbar-en></app-navbar-en>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Scholarship Application</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="form">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input [(ngModel)]="name" name="name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Residence Place</label>
+                        <input [(ngModel)]="residence" name="residence" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone No.</label>
+                        <input [(ngModel)]="phone" name="phone" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>High School Average</label>
+                        <input [(ngModel)]="high_school_average" name="high_school_average" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Documents</label>
+                        <input type="file" class="form-control-file" name="document_one" (change)="onChangeOne($event)">
+                    </div>
+                    <p> Required files </p>
+                    <ul>
+                        <li>High school /Diploma certificate</li>
+                        <li>Proving Jordanian nationality</li>
+                        <li>location of residence</li>
+                        <li>Average income</li>
+                    </ul>
+                    <p>All documents should be zipped in one file</p>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Major</label>
+                        <select [(ngModel)]="major" name="major" class="form-control" id="exampleFormControlSelect1">
+                            <option>----------</option>
+                            <option>Pharmacy</option>
+                            <option>Architecture Engineering</option>
+                            <option>Civil Engineering</option>
+                            <option>Physical Therapy</option>
+                            <option>Medical and Radiological Imaging</option>
+                            <option>Artificial Intelligence</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Average family income</label>
+                        <select [(ngModel)]="avg_income" name="avg_income" class="form-control" id="exampleFormControlSelect1">
+                            <option>----------</option>
+                            <option>200 - 400</option>
+                            <option>400 - 600</option>
+                            <option>600 - 800</option>
+                            <option>800 ...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Family members</label>
+                        <input [(ngModel)]="family_members" name="family_members" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Social Relationship</label>
+                        <select [(ngModel)]="social_relationship" name="social_relationship" class="form-control" id="exampleFormControlSelect1">
+                            <option>----------</option>
+                            <option>Married</option>
+                            <option>Single</option>
+                        </select>
+                    </div>
+
+                    <p *ngIf="show_true" style="color: rgb(36, 179, 67); font-size: 20px; text-align: left; font-weight: bold;">Your application has been sent successfully!</p>
+                    <p *ngIf="show_false" style="color: rgb(179, 36, 36); font-size: 20px; text-align: left; font-weight: bold;">Something went wrong!</p>
+                    <button (click)="onSubmit()" type="submit" class="btn btn-warning">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<app-footer-en></app-footer-en>

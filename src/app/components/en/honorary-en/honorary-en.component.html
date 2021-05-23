@@ -1,0 +1,68 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Honorary Board</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="researches">
+    <div class="container">
+
+
+        <div class="section" *ngFor="let year of years">
+            <div class="year">
+            <!--<h1>{{year.year}} - {{year.semester}} Semester</h1>--> 
+            <h1>{{year.year}}</h1>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3" style="margin: 10px 0;" *ngFor="let student of year.students">
+                    <!-- <div class="card">
+                        <img class="card-img-top" src="{{student.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{student.name_english}}</h5>
+                            <p class="card-text">{{student.major_english}}</p>
+                            <p class="card-text">{{student.avarage}}</p>
+                        </div>
+                    </div> -->
+
+                    <div class="card">
+                        <i class="fas fa-star icon"></i>
+                        <!-- <img class="card-img-top" src="{{student.image}}" alt="Card image cap"> -->
+                        <div class="profileimg" style="height: 270px; background-image: url({{student.image}}); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="card-body" style="position: relative;">
+                            
+                            <img style="width: 40px; right: 10px; top: 10px; position: absolute;" src="../../../../assets/images/AUT.png" alt="">
+                          <h5 class="card-title" style="margin: 0 !important;">{{student.name_english}}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush" style="margin: 0 !important;">
+                          <li class="list-group-item">{{student.major_english}}</li>
+                          <li class="list-group-item">average: {{student.average}}</li>
+                        </ul>
+                      </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>

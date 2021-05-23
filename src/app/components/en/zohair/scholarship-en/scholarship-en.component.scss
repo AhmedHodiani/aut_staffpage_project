@@ -1,0 +1,219 @@
+@font-face {
+    font-family: Proxima-Nova-Alt;
+    src        : url("../../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Bold.otf");
+}
+
+@font-face {
+    font-family: Proxima-Nova-Alt-Light;
+    src        : url("../../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Light.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src        : url("../../../../../assets/fonts/Merriweather/Merriweather-Bold.otf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src        : url("../../../../../assets/fonts/Merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: Palatino-Linotype;
+    src        : url("../../../../../assets/fonts/Palatino-Linotype/pala\ bold.ttf");
+}
+
+$primary-blue      : #181e38;
+$primary-light-blue: #272e4a;
+$primary-white     : #f7f7f7;
+$primary-yellow    : #FFB93F;
+
+.colorlib-nav ul li.activee>a {
+    color   : white;
+    position: relative;
+    position: relative;
+}
+
+.arrow {
+    position        : absolute;
+    bottom          : 0;
+    width           : 100%;
+    padding-bottom  : 40px;
+    background-color: #f1f1f1;
+}
+
+.arrow:before,
+.arrow:after {
+    content         : '';
+    position        : absolute;
+    bottom          : 100%;
+    width           : 50%;
+    padding-bottom  : inherit;
+    background-color: inherit;
+}
+
+.arrow:before {
+    right                   : 50%;
+    -ms-transform-origin    : 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin        : 100% 100%;
+    -ms-transform           : skewX(45deg);
+    -webkit-transform       : skewX(45deg);
+    transform               : skewX(45deg);
+}
+
+.arrow:after {
+    left                    : 50%;
+    -ms-transform-origin    : 0 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin        : 0 100%;
+    -ms-transform           : skewX(-45deg);
+    -webkit-transform       : skewX(-45deg);
+    transform               : skewX(-45deg);
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    .background {
+        position         : absolute;
+        width            : 100%;
+        height           : 100%;
+        background       : url("../../../../../assets/images/AUT-university-bg.png");
+        background-size  : cover;
+        background-repeat: no-repeat;
+        z-index          : -2;
+    }
+
+    .mask {
+        z-index: 100;
+
+        @media (max-width: 575px) {
+            img {
+                margin: 0 15px;
+            }
+        }
+
+        .img {
+            position: absolute;
+            right   : 0;
+            z-index : -10;
+            top     : 0;
+
+            img {}
+        }
+
+        .container {
+            @media only screen and (min-width: 755px) {
+                .context {
+                    padding-top   : 13%;
+                    padding-bottom: 18%;
+
+                    h1 {
+                        font-size  : 53px;
+                        line-height: 81px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 755px) {
+                .context {
+                    padding-top   : 13%;
+                    padding-bottom: 24%;
+
+                    h1 {
+                        font-size  : 40px;
+                        line-height: 64px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 27%;
+
+                    h1 {
+                        font-size  : 30px;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 425px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 30%;
+
+                    h1 {
+                        font-size  : 145%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 365px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 33%;
+
+                    h1 {
+                        font-size  : 137%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            .context {
+                text-align: center;
+
+                h1 {
+                    font-family: Palatino-Linotype;
+                }
+
+                h1 {
+                    font-family: Palatino-Linotype;
+                    color      : $primary-white;
+
+                    span {
+                        background-color: #181e3878;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form {
+    background-color: #f1f1f1;
+    padding: 0 0 80px;
+
+    .btn {
+        font-family: Proxima-Nova-Alt;
+        background-color: #ffb93f;
+        display: block;
+        margin-right: auto;
+        padding: 8px 22px;
+    }
+}

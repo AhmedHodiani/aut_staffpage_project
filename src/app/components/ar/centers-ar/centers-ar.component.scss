@@ -1,0 +1,941 @@
+@font-face {
+    font-family: Proxima-Nova-Alt;
+    src        : url("../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Bold.otf");
+}
+
+@font-face {
+    font-family: Proxima-Nova-Alt-Light;
+    src        : url("../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Light.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src        : url("../../../../assets/fonts/Merriweather/Merriweather-Bold.otf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src        : url("../../../../assets/fonts/Merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: Palatino-Linotype;
+    src        : url("../../../../assets/fonts/Palatino-Linotype/pala\ bold.ttf");
+}
+
+@font-face {
+    font-family: Cairo;
+    src        : url("../../../../assets/fonts/Cairo/Cairo-Black.ttf");
+}
+
+@font-face {
+    font-family: Cairo-Bold;
+    src        : url("../../../../assets/fonts/Cairo/Cairo-Bold.ttf");
+}
+
+@font-face {
+    font-family: Tajawal;
+    src        : url("../../../../assets/fonts/Tajawal/Tajawal-Medium.ttf");
+}
+
+@font-face {
+    font-family: Tajawal-Bold;
+    src        : url("../../../../assets/fonts/Tajawal/Tajawal-ExtraBold.ttf");
+}
+
+$heading-font      :Cairo;
+$heading-bold-font :Cairo-Bold;
+$pargraphs-font    :Tajawal;
+$bottons-font      :Tajawal-Bold;
+
+$primary-blue      : #181e38;
+$primary-light-blue: #272e4a;
+$primary-white     : #f7f7f7;
+$primary-yellow    : #FFB93F;
+
+.colorlib-nav ul li.activee>a {
+    color   : white;
+    position: relative;
+    position: relative;
+}
+
+.arrow {
+    position        : absolute;
+    bottom          : 0;
+    width           : 100%;
+    padding-bottom  : 40px;
+    background-color: #f1f1f1;
+}
+
+.arrow:before,
+.arrow:after {
+    content         : '';
+    position        : absolute;
+    bottom          : 100%;
+    width           : 50%;
+    padding-bottom  : inherit;
+    background-color: inherit;
+}
+
+.arrow:before {
+    right                   : 50%;
+    -ms-transform-origin    : 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin        : 100% 100%;
+    -ms-transform           : skewX(45deg);
+    -webkit-transform       : skewX(45deg);
+    transform               : skewX(45deg);
+}
+
+.arrow:after {
+    left                    : 50%;
+    -ms-transform-origin    : 0 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin        : 0 100%;
+    -ms-transform           : skewX(-45deg);
+    -webkit-transform       : skewX(-45deg);
+    transform               : skewX(-45deg);
+}
+
+header {
+    direction : rtl;
+    text-align: right;
+    position  : relative;
+    overflow  : hidden;
+
+    .background {
+        position         : absolute;
+        width            : 100%;
+        height           : 100%;
+        background       : url("../../../../assets/images/AUT-university-bg.png");
+        background-size  : cover !important;
+        background-repeat: no-repeat !important;
+        z-index          : -2;
+    }
+
+    .mask {
+        z-index: 100;
+
+        @media (max-width: 575px) {
+            img {
+                margin: 0 15px;
+            }
+        }
+
+        .img {
+            position: absolute;
+            right   : 0;
+            z-index : -10;
+            top     : 0;
+
+            img {}
+        }
+
+        .container {
+            @media only screen and (min-width: 755px) {
+                .context {
+                    padding-top   : 21%;
+                    padding-bottom: 26%;
+
+                    h1 {
+                        font-size  : 53px;
+                        line-height: 81px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 755px) {
+                .context {
+                    padding-top   : 13%;
+                    padding-bottom: 24%;
+
+                    h1 {
+                        font-size  : 40px;
+                        line-height: 64px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 27%;
+
+                    h1 {
+                        font-size  : 30px;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 425px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 30%;
+
+                    h1 {
+                        font-size  : 145%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 365px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 33%;
+
+                    h1 {
+                        font-size  : 137%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+                    }
+                }
+            }
+
+            .context {
+                text-align: center;
+
+                h1 {
+                    font-family: $heading-font;
+                }
+
+                h1 {
+                    font-family: $heading-font;
+                    color      : $primary-white;
+
+                    span {
+                        background-color: #181e3878;
+                    }
+                }
+
+                .btn-warning {
+                    font-family: $pargraphs-font;
+                    background-color: $primary-yellow;
+                    color           : $primary-blue;
+                    padding         : 9px 21px;
+                    font-size: 20px;
+                    margin: 20px 5px 0;
+                }
+                a {
+                    text-decoration: none;
+                    color           : $primary-blue;
+                    border: none !important;
+                    &:hover {
+                    border: none !important;
+                
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-us-one {
+
+    a {
+        text-decoration: none;
+        color           : $primary-blue;
+        border: none !important;
+        &:hover {
+        border: none !important;
+    
+        }
+    }
+    direction       : rtl;
+    text-align      : right;
+    overflow        : hidden;
+    background-color: #f1f1f1;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 0px 15px 70px;
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 40px 15px 100px;
+        }
+    }
+
+    .container {
+        .row {
+            .space {
+                padding: 0 20px;
+
+                .background {
+                    background-repeat: no-repeat !important;
+                    background-size  : cover !important;
+                    width            : 100% !important;
+                    height           : 100% !important;
+                    box-shadow       : 26px 26px 78px -34px rgba(0, 0, 0, 0.425);
+                    border-radius    : 4px;
+                }
+            }
+
+            .prop {
+                padding   : 40px 20px 5px;
+                text-align: right;
+            }
+
+            .colorlib-heading {
+                z-index: 200;
+            }
+
+            .prop {
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 40px;
+                        margin-bottom: 40px;
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 23.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 20.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 27px;
+                        margin-bottom: 30px;
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 18.25px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                h2 {
+                    font-family  : $heading-font;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                .p {
+                    margin-bottom: 10px;
+                    color        : $primary-blue;
+                    font-family  : $pargraphs-font;
+                    opacity      : 1;
+                }
+
+                p {
+                    text-align: justify;
+                    font-family: $pargraphs-font;
+                    color      : $primary-blue;
+                    opacity    : 0.95;
+                }
+                .btn-warning {
+                    font-family: $pargraphs-font;
+                    background-color: $primary-yellow;
+                    color           : $primary-blue;
+                    padding         : 12px 23px;
+                    font-size: 20px;
+                    margin-bottom: 28px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.mission-and-vision {
+    direction           : rtl;
+    text-align          : right;
+    overflow            : hidden;
+    // background       : linear-gradient(45deg, #090b159c, #181e389c), url("../../../../assets/images/unnamed.jpg") !important;
+    // background-size  : cover;
+    // background-repeat: no-repeat;
+    background          : linear-gradient(45deg, #d69f2278, #ffca339e), url("../../../../assets/images/AUT-aqaba-bg.png");
+    background-size     : cover;
+    background-repeat   : no-repeat;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+        }
+    }
+
+    .container {
+        .row {
+            .prop {
+                text-align: right;
+
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+                    }
+
+                    p {
+                        font-size    : 24.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    p {
+                        font-size    : 20.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 25px;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-size    : 18.25px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                h2 {
+                    font-family  : $heading-font;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                p {
+                    text-align: justify;
+                    font-family: $pargraphs-font;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.8;
+                    margin     : 0;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .prop2 {
+                    margin-top: 20px;
+                }
+            }
+
+            .prop2 {
+                text-align: right;
+
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+                    }
+
+                    li {
+                        font-size    : 22.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    li {
+                        font-size    : 18.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 25px;
+                        margin-bottom: 30px;
+                    }
+
+                    li {
+                        font-size    : 17.25px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                h2 {
+                    font-family  : $heading-font;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                li {
+                    text-align: justify;
+                    font-family: $pargraphs-font;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.8;
+                    margin     : 0;
+                }
+            }
+        }
+    }
+}
+
+.dean {
+    direction : rtl;
+    text-align: right;
+    position  : relative;
+
+    .background {
+        position           : absolute;
+        height             : 100%;
+        width              : 100%;
+        top: 0;
+        background         : url("../../../../assets/images/AUT-aqaba-sea-bg.png");
+        filter             : brightness(65%);
+        background-repeat  : no-repeat;
+        background-position: center;
+        background-size    : cover;
+        z-index   : -2;
+    }
+
+    .container {
+        padding-top   : 70px;
+        padding-bottom: 70px;
+
+        .picture {
+            margin: 0 auto 20px;
+
+            img {
+                height:        500px;
+                border-radius: 6px;
+                display: block;
+                margin: auto;
+                filter       : grayscale(30%);
+            }
+        }
+
+        h4 {
+            text-align   : center;
+            margin-top   : 20px;
+            font-family  : $heading-font;
+            color        : $primary-white;
+            margin-bottom: 40px;
+        }
+
+        .prop {
+            text-align: right;
+            padding-bottom: 20px;
+            @media only screen and (min-width: 600px) {
+
+                p,
+                .p {
+                    font-size    : 23.25px;
+                    margin-bottom: 32px;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                p,
+                .p {
+                    font-size    : 20.25px;
+                    margin-bottom: 32px;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+
+                p,
+                .p {
+                    font-size    : 18.25px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .p {
+                margin-bottom: 10px;
+                color        : $primary-white;
+                font-family  : $pargraphs-font;
+                opacity      : 1;
+            }
+
+            p {
+                text-align: justify;
+                font-family: $pargraphs-font;
+                color      : $primary-white;
+                opacity    : 0.95;
+            }
+        }
+    }
+}
+
+.staff {
+    direction : rtl;
+    text-align: right;
+    margin-top: -70px;
+    z-index   : 1000;
+
+    // background: url("../../../../assets/images/AUT-aqaba-bg.png");
+    .container {
+        box-shadow      : 0px 20px 9px 0px rgba(0, 0, 0, 0.431);
+        background-color: #f0f0f0;
+        padding-top     : 70px;
+        padding-bottom  : 70px;
+
+        @media only screen and (min-width: 600px) {
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        h2 {
+            color        : $primary-blue;
+            font-family  : $heading-font;
+            margin-bottom: 30px;
+            text-align   : center;
+        }
+
+        hr {
+            border-top   : solid $primary-blue 3px;
+            width        : 50px;
+            margin       : auto;
+            margin-bottom: 50px;
+        }
+
+        .pictures {
+            .row {
+                .pic {
+                    img {
+                        display      : block;
+                        margin       : auto;
+                        filter       : grayscale(30%);
+                        border-radius: 6px;
+                        width        : 250px;
+                    }
+
+                    h4 {
+                        margin-top : 15px;
+                        text-align : center;
+                        color      : $primary-blue;
+                        font-family: $heading-font;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Why-choose-us {
+    direction       : rtl;
+    text-align      : right;
+    overflow        : hidden;
+    background-color: $primary-white;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 100px 15px 100px;
+        }
+    }
+
+    .container {
+        .why-us {
+            .title {
+                text-align: center;
+
+                hr {
+                    border-top   : solid $primary-blue 3px;
+                    width        : 50px;
+                    margin       : auto;
+                    margin-bottom: 30px;
+                }
+
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size: 50px;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size: 40px;
+                    }
+                }
+
+                h2 {
+                    color        : $primary-blue;
+                    font-family  : $heading-font;
+                    margin-bottom: 30px;
+                    text-align   : center;
+                }
+            }
+
+            p {
+                font-family   : $pargraphs-font;
+                padding-bottom: 50px;
+                color         : $primary-blue;
+                text-align    : center;
+                opacity       : 0.9;
+                width         : 70%;
+                margin        : 0 auto;
+            }
+
+            .context {
+                .section {
+                    margin    : 20px 0;
+                    text-align: center;
+
+                    .icon {
+                        .circle-icon {
+                            background    : $primary-blue;
+                            width         : 120px;
+                            height        : 120px;
+                            border-radius : 50%;
+                            text-align    : center;
+                            line-height   : 120px;
+                            vertical-align: middle;
+                            padding       : 33px;
+                            color         : $primary-white;
+                        }
+                    }
+
+                    h4 {
+                        padding    : 20px 0 10px;
+                        font-family: $heading-font;
+                        opacity    : 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.assistant {
+    margin-bottom: 20px;
+    .picture {
+        margin: 0 auto 20px;
+
+        img {
+            height:        500px;
+            border-radius: 6px;
+            display: block;
+            margin: auto;
+            filter       : grayscale(30%);
+        }
+    }
+
+    h4 {
+        text-align   : center;
+        margin-top   : 20px;
+        font-family  : $heading-font;
+        color        : $primary-blue;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list_requirements_one,
+.list_requirements_two,
+.list_requirements_three {
+    text-align      : right;
+    direction       : rtl;
+    background-color: #f1f1f1;
+    padding         : 50px 0 70px;
+
+    .container {
+        @media only screen and (min-width: 600px) {
+            h2 {
+                font-size    : 40px;
+                margin-bottom: 40px;
+
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            h2 {
+                font-size    : 35px;
+                margin-bottom: 40px;
+
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            h2 {
+                font-size    : 27px;
+                margin-bottom: 30px;
+
+            }
+        }
+
+        h2 {
+            text-align   : center;
+            font-family  : $heading-font;
+            margin-bottom: 60px;
+            color        : $primary-blue;
+        }
+
+        .center {
+            font-family: $pargraphs-font;
+            font-weight: 600;
+            color      : $primary-blue;
+            opacity    : 0.7;
+            margin     : -30px auto 60px;
+            text-align : center;
+            max-width  : 600px;
+
+        }
+
+        hr {
+            margin    : 20px 0 35px;
+            border-top: solid 2px $primary-blue;
+            opacity   : 0.2;
+        }
+
+        .lists {
+            .list {
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    li {
+                        font-size    : 22.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 25px;
+                        margin-bottom: 40px;
+                    }
+
+                    li {
+                        font-size    : 18.25px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 20px;
+                        margin-bottom: 30px;
+                    }
+
+                    li {
+                        font-size    : 17.25px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                h2 {
+                    text-align   : right;
+                    font-family  : $heading-font;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                    opacity      : 0.9;
+                }
+
+                li {
+                    font-family: $pargraphs-font;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.6;
+                    margin     : 8px 0;
+                }
+
+                p {
+                    font-family: $pargraphs-font;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.7;
+                    margin     : 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+.list_requirements_two {
+    background-color: white;
+    padding         : 70px 0 70px;
+}
+
+
+.list_requirements_three {
+    background-color: #f1f1f1;
+    padding         : 70px 0 70px;
+}

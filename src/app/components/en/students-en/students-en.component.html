@@ -1,0 +1,242 @@
+<app-navbar-en></app-navbar-en>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Student's Services</span></h1>
+
+                <button *ngIf="examsSchedule" class="btn btn-warning"><a target="_blank" href="{{examsSchedule}}">Final Exams Schedule</a></button>
+                <button *ngIf="courseSchedule" class="btn btn-warning"><a target="_blank" href="{{courseSchedule}}">Course Schedule</a></button>
+                <button class="btn btn-warning"><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">Registration</a></button>
+                <button class="btn btn-warning"><a target="_blank" href="http://lms.aut.edu.jo/">E-Learning</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+
+<div class="about-us-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+
+                
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 100%; width: 100%;">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background" style="background-image: url({{library[0].img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;" *ngFor="let img of library.slice(1)">
+                            <div class="background" style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+                    
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+                
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>Library</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p" style="text-align : justify;"><strong>The university library is located on the first floor of the university's
+                                main educational building. It is a large library extending over 1200 square meters, and
+                                it is adorned with glass facades overlooking the interior garden and, thus, allowing
+                                natural light to enter the library. The library can accommodate about 350 students at
+                                one time.</strong></p>
+
+                        <p style="text-align : justify;">The Library collection includes about 29,000 pieces of books, periodicals, references, and
+                            encyclopedias, and work is underway on the expansion of the library books to support the
+                            newly proposed disciplines at the university. There are many references available in the
+                            library at the present time revolving around natural and human sciences, information
+                            technology, financial and administrative sciences, engineering, and pharmacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="about-us-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>Sports</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p"><strong>Sports is at the heart of Aqaba University's attention. Aqaba University of
+                                Technology provides the following sports facilities:</strong></p>
+
+                        <ul>
+                            <li>A gym area extending over 1000 square meters where ground tennis, volleyball,
+                                basketball, and handball can be played. This gym includes fitting rooms, bathrooms, and
+                                showers.</li>
+                            <li>Outdoor football court with a stadium.</li>
+                            <li>Six outdoor basketball courts.</li>
+                            <li>Three outdoor handball courts</li>
+                            <li>Three outdoor ground tennis ball courts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 space">
+                <div id="carouselExampleIndicatorstwo" class="carousel slide" data-ride="carousel" style="height: 100%; width: 100%;" *ngIf="sports != []">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background" style="background-image: url({{sports[0].img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;" *ngFor="let img of sports.slice(1)">
+                            <div class="background" style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+                    
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorstwo" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorstwo" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="about-us-three">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+                <div id="carouselExampleIndicatorsthree" class="carousel slide" data-ride="carousel" style="height: 100%; width: 100%;" *ngIf="buildings != []">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background" style="background-image: url({{buildings[0].img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;" *ngFor="let img of buildings.slice(1)">
+                            <div class="background" style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;"></div>
+                        </div>
+                    
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsthree" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorsthree" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>Student's Accommodation</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p" style="text-align : justify;"><strong>Because Aqaba University of Technology is interested in attracting students
+                                from outside the city of Aqaba, it has established on- campus accommodation for male and
+                                female students. The university dormitory can accommodate 328 students, and it has
+                                spacious rooms overlooking the sea. The female dorm can accommodate 264 female students,
+                                providing them with spacious rooms in a safe area inside the university.</strong></p>
+
+                        <ul>
+                            <li>Each room is a master bedroom (with a private bathroom and Shower).</li>
+                            <li>Each room has two beds , a wardrobe , offices for study, two chairs , a small
+                                refrigerator , a sink provided with cold and hot water.</li>
+                            <li>There are shared kitchens, dining rooms, reading rooms, and TV rooms.</li>
+                            <li>The university has a main restaurant offering three meals a day, a store, a cafeteria
+                                and a laundry.</li>
+                            <li>The monthly financial cost per a double room is JD 100 per a student.</li>
+                            <li>The single-bed rooms are rented on demand with the cost of JD 160.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about-us-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>Transportations</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p" style="text-align : justify;"><strong>The University provides buses to transfer students from the city of Aqaba
+                                to the university and vice versa. The buses' station is located near the courtyard that
+                                is beside Zaatari Hotel and Aqaba Buses' Station Complex at King Talal Street. The
+                                university buses can take students to and from the University at specific times
+                                announced every semester and these times can be changed from one semester to another
+                                depending on traffic density. The bus journey between Aqaba the university takes about
+                                20 minutes.</strong></p>
+
+                        <p style="text-align : justify;">The subscription fees are per one academic semester. For the students who have been admitted
+                            into the university since (2016-2017),the first and second semester bus fees are JD 100
+                            only, and the summer course bus feesare JD 50 for the students residing at Aqaba. As for the
+                            students residing at the university accommodation, the subscription fees of the summer
+                            semester are JD25 during the regular semesters and JD 12.5 during the summer semester.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 space">
+                <div class="background"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>

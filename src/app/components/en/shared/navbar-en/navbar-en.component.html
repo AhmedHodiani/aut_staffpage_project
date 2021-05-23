@@ -1,0 +1,359 @@
+<div class="container" style="position: relative;">
+    <div class="covid-19">
+        <div class="space">
+            <div style="cursor: pointer;" onclick="window.open('https://www.docdroid.net/moOVWWB/covid-19-pdf', '_blank');">
+                <img src="../../../../../assets/images/icons/KeepDistance.svg" alt="">
+                <h4>#keepdistance</h4>
+            </div>
+            <hr>
+
+            <div style="cursor: pointer;" onclick="window.open('https://docdro.id/fF2yBiH', '_blank');">
+                <img src="../../../../../assets/images/icons/icons/no-smoking.png" alt="">
+                <h4>#nosmoking</h4> 
+            </div>
+
+
+        </div>
+        <div class="arrow-down"></div>
+    </div>
+</div>
+<div class="covid-19-mobile" style="cursor: pointer;" onclick="window.open('https://www.docdroid.net/moOVWWB/covid-19-pdf', '_blank');">
+    <div class="space">
+        <h4>#keepdistance</h4>
+    </div>
+    <div class="arrow-down"></div>
+</div>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light links-bar">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a routerLink="/en/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="link-active"
+                        class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/en/presidency" routerLinkActive="link-active"
+                                [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">President Office</a>
+                        
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkk" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="margin-left: 8px">
+                            University Councils
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkk">
+
+                            
+                            <a *ngFor="let senate of senates" class="dropdown-item" (click)="onSenateClick(senate.id)"
+                                [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">{{senate.senate_english}}</a>
+    
+                        </div>
+
+                       <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Something else here</a>
+                            <ul class="dropdown-menu">
+                              <a class="dropdown-item" href="#">A</a>
+                              <a class="dropdown-item" href="#">b</a>
+                            </ul>
+                          </li>-->
+                        
+                        <a class="dropdown-item" (click)="onCenterClick('about')"
+                            [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">About the University</a>
+
+                        <a class="dropdown-item" routerLink="/en/about/honorary"
+                            [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">Honorary Board</a>
+                        
+                        <a class="dropdown-item" routerLink="/en/gallary"
+                            [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">Gallary</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="/en/admission" routerLinkActive="link-active" [routerLinkActiveOptions]="{exact: false}" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Admission
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/en/admission/requirements" style="cursor: pointer;" 
+                            [routerLinkActiveOptions]="{exact: true}" routerLinkActive="link-active">Admission
+                            Requirements</a>
+
+                        <a class="dropdown-item" routerLink="/en/admission/programs"
+                            [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">Programs</a>
+
+                        <a class="dropdown-item" routerLink="/en/admission/apply"
+                            [routerLinkActiveOptions]="{exact: true}" style="cursor: pointer;" routerLinkActive="link-active">Apply To AUT</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Colleges
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" *ngFor="let college of colleges"
+                            style="cursor: pointer;" [routerLinkActiveOptions]="{exact: true}"
+                            routerLinkActive="link-active"
+                            (click)="onCollegeClick(college.display_url)">{{college.name_english}}</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Deanships
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div *ngFor="let center of centers">
+                                <a class="dropdown-item" 
+                                [routerLinkActiveOptions]="{exact: true}"
+                                style="cursor: pointer;" routerLinkActive="link-active"
+                                *ngIf="center.center_type == 'deanship'"
+                                (click)="onCenterClick(center.display_url)">{{center.name_english}}</a>
+                        </div>
+                        
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Administrative Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="left: auto; right: -302px;">
+                            <div class="row" style="z-index: 4000; width: 700px;">
+                                <div class="col-md-5" style="border-right: 1px solid #f7f7f7cb;">
+                                    <h4 style="color: #f7f7f7; padding-left: 16px; font-size: 18px;     padding-top: 5px;">- Units</h4>
+
+                                    <div *ngFor="let center of centers">
+                                        <a class="dropdown-item" 
+                                        style="cursor: pointer;" [routerLinkActiveOptions]="{exact: true}"
+                                        routerLinkActive="link-active"
+                                        *ngIf="center.center_type == 'unit' && center.display_url != 'about'"
+                                        (click)="onCenterClick(center.display_url)">{{center.name_english}}</a>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h4 style="color: #f7f7f7; padding-left: 16px; font-size: 18px;     padding-top: 5px;">- Departments</h4>
+
+                                    <div *ngFor="let center of centers">
+                                        <a class="dropdown-item" 
+                                        style="cursor: pointer;" [routerLinkActiveOptions]="{exact: true}"
+                                        routerLinkActive="link-active"
+                                        *ngIf="center.center_type == 'department'"
+                                        (click)="onCenterClick(center.display_url)">{{center.name_english}}</a>
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- <div class="col-md-4">
+                                    <h4 style="color: #f7f7f7; padding-left: 16px; font-size: 18px;     padding-top: 5px;">- Offices</h4>
+
+                                    <div *ngFor="let center of centers">
+                                        <a class="dropdown-item" 
+                                        style="cursor: pointer;" [routerLinkActiveOptions]="{exact: true}"
+                                        routerLinkActive="link-active"
+                                        *ngIf="center.center_type == 'office'"
+                                        (click)="onCenterClick(center.display_url)">{{center.name_english}}</a>
+                                    </div>
+                                    
+                                </div> -->
+                            </div>
+                                
+                        
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Centers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div *ngFor="let center of centers">
+                                <a class="dropdown-item" 
+                                style="cursor: pointer;" [routerLinkActiveOptions]="{exact: true}"
+                                routerLinkActive="link-active"
+                                *ngIf="center.center_type == 'center'"
+                                (click)="onCenterClick(center.display_url)">{{center.name_english}}</a>
+                        </div>
+                        
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a routerLink="/en/alumni" routerLinkActive="link-active"
+                        style="cursor: pointer;" [routerLinkActiveOptions]="{exact: false}" class="nav-link" href="#">Alumni</a>
+                </li>
+
+
+
+
+
+           
+
+
+            </ul>
+            <ul class="navbar-nav ml-auto arabic">
+                <li class="nav-item">
+                    <a class="nav-link arabic-font" routerLink="/ar/" style="cursor: pointer;" (click)="onLanguageChange()">عربي</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-icon-one d-lg-none">
+    <div class="container">
+        <a class="navbar-brand"><img src="../../../../../assets/images/AUT.png"></a>
+        <h5>Aqaba University of <br>Technology</h5>
+
+
+        <div class="verticle-line"></div>
+
+        <a class="navbar-brand"><img src="../../../../../assets/images/AARU.png"></a>
+
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="ml-auto hello">
+            <i onclick="location.href='https://www.google.com/maps/place/Aqaba+University+Of+Technology/@29.4472359,34.9856572,12.05z/data=!4m5!3m4!1s0x15007713a3c23dbd:0x876c9b5ce76af53b!8m2!3d29.4371615!4d35.0121346';"
+                target="_blank" class="fas fa-map-marker-alt mr-2"
+                style="font-size: 35px;margin: 0 !important; cursor: pointer;"></i>
+        </div>
+
+        <div class="verticle-line-one"></div>
+        <!-- <div>
+            <a class="nav-link link-active" style="padding-left: 10px;">South of Aqaba, Opposite Aqaba <br>Development
+                Corporation Stores</a>
+        </div> -->
+        <div class="ml-autoo hello">
+            <i class="fas fa-phone" style="font-size: 35px;margin: 0 !important;"></i>
+        </div>
+        <div class="helloo">
+            <a class="nav-link link-active" style="padding-left: 10px;">+962 (0) 3 2092300 <br>+962 (0) 3 2092310</a>
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+ 
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-icon-two d-none d-lg-block">
+    <div class="container">
+        <a class="navbar-brand"><img src="../../../../../assets/images/AUT.png"></a>
+        <h5>Aqaba University of <br>Technology</h5>
+
+
+        <!-- <div class="verticle-line"></div> -->
+
+
+
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="jobs" style="margin-left: auto;">
+            <h6 style="cursor: pointer;" data-toggle="modal" data-target="#staticBackdropfour" *ngIf="_router.url == '/en/centers/Human_Resource'">Apply for a Job</h6>
+            <h6 style="cursor: pointer;" routerLink="/en/feedback" *ngIf="_router.url != '/en/centers/Human_Resource'">Feedback</h6>
+        </div>
+
+        <div class="verticle-line-one" *ngIf="_router.url == '/en/centers/Human_Resource'"></div>
+        <div class="verticle-line-one" *ngIf="_router.url != '/en/centers/Human_Resource'"></div>
+
+        <div class="ml-auto" style="margin-left: 0 !important;">
+            <i class="fab fa-whatsapp-square icon-fa" onclick="location.href='https://wa.me/00962792920890'"
+                style="cursor: pointer; margin: 0; color: #55dc60;"></i>
+            <i class="fab fa-facebook-square icon-fa" onclick="location.href='https://www.facebook.com/AUT.official'"
+                style="cursor: pointer;  color: #4444b7;"></i>
+            <i class="fab fa-youtube-square icon-fa"
+                onclick="location.href='https://www.youtube.com/channel/UCCT1uU7qgIZK9dcwhW5kbxw'"
+                style="cursor: pointer;  color: #e43c3c;"></i>
+            <i class="fab fa-twitter-square icon-fa"
+                onclick="location.href='https://twitter.com/autjo_official?lang=en'" style=" color: #54d8e6; cursor: pointer;"></i>
+        </div>
+        <div class="verticle-line-one"></div>
+
+
+        <div class="hello">
+
+
+            <i onclick="location.href='https://www.google.com/maps/place/Aqaba+University+Of+Technology/@29.4472359,34.9856572,12.05z/data=!4m5!3m4!1s0x15007713a3c23dbd:0x876c9b5ce76af53b!8m2!3d29.4371615!4d35.0121346';"
+                target="_blank" class="fas fa-map-marker-alt mr-2"
+                style="font-size: 35px;margin: 0 !important; cursor: pointer;"></i>
+        </div>
+
+        <div class="verticle-line-one"></div>
+        <!-- <div>
+            <a class="nav-link link-active" style="padding-left: 10px;">South of Aqaba, Opposite Aqaba <br>Development
+                Corporation Stores</a>
+        </div> -->
+        <div class="ml-autoo hello">
+            <i class="fas fa-phone" style="font-size: 35px;margin: 0 !important;"></i>
+        </div>
+        <div class="verticle-line-one"></div>
+        <!-- <div class="helloo">
+            <a class="nav-link link-active" style="padding-left: 10px;">+962 (0) 3 2092300 <br>+962 (0) 3 2092310</a>
+        </div> -->
+        <a class="navbar-brand size" target="_blank" style="padding-right: 5px;"><img src="../../../../../assets/images/100.png"></a>
+
+        <a class="navbar-brand size" target="_blank" href="https://www.uni-med.net/" style="padding-right: 5px;"><img src="../../../../../assets/images/icons/icons/Unimed.png"></a>
+                <a class="navbar-brand size" target="_blank" href="https://www.iau-aiu.net/" style="padding-right: 5px;"><img src="../../../../../assets/images/International_Association_of_Universities_logo_and_wordmark_English.png"></a>
+
+                <a class="navbar-brand college-logo size" target="_blank" href="http://www.aaru.edu.jo/Home.aspx"><img src="../../../../../assets/images/AARU.png"></a>
+
+    </div>
+</nav>
+
+
+<div class="modal fade" id="staticBackdropfour" tabindex="-1" aria-labelledby="staticBackdropfourLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropfourLabel">Staff</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <p>To apply for a Job, send the CV to this email</p>
+                <div class="item">
+                    <h4><a target="_blank" href="mailto:hr@aut.edu.jo">hr@aut.edu.jo</a></h4>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<app-navbar-en></app-navbar-en>
+
+<div class="sustain" style="padding-top: 70px;">
+    <h1>Together for Sustainability</h1>
+    <hr>
+    <div class="container">
+        <a href="{{mainImage.english_link}}" target="_blank">
+            <img src="http://localhost:8000{{mainImage.english_image}}" alt="">
+        </a>
+        <hr class="hr">
+
+        <div class="htmll">
+            <span [outerHTML]="html.english_html"></span>
+        </div>
+
+        <hr class="hr">
+
+        <div class="row album">
+            <div class="col-md-3" *ngFor="let picture of pictures" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="selected = picture.image">
+                <img src="http://localhost:8000{{picture.image}}" alt="">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <img src="http://localhost:8000{{selected}}" alt="">
+        </div>
+    </div>
+</div>
+
+<app-footer-en></app-footer-en>

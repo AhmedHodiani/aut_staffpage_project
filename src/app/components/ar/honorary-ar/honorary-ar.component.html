@@ -1,0 +1,68 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>لوحة شرف رئاسة الجامعة</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="researches">
+    <div class="container">
+
+
+        <div class="section" *ngFor="let year of years">
+            <div class="year">
+                <!--<h1 *ngIf="year.semester == 'First'">{{year.year}} - الفصل الأول</h1>
+                <h1 *ngIf="year.semester == 'Second'">{{year.year}} - الفصل الثاني</h1>
+                <h1 *ngIf="year.semester == 'Summer'">{{year.year}} - الفصل الصيفي</h1> -->
+                <h1>{{year.year}}</h1>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3" style="margin: 10px 0;" *ngFor="let student of year.students">
+                    <!-- <div class="card">
+                        <img class="card-img-top" src="{{student.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{student.name_english}}</h5>
+                            <p class="card-text">{{student.major_english}}</p>
+                            <p class="card-text">{{student.avarage}}</p>
+                        </div>
+                    </div> -->
+
+                    <div class="card">
+                        <i class="fas fa-star icon"></i>
+                        <div class="profileimg" style="height: 270px; background-image: url({{student.image}}); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="card-body" style="position: relative;">
+                            <img style="width: 40px; left: 10px; top: 10px; position: absolute;" src="../../../../assets/images/AUT.png" alt="">
+                          <h5 class="card-title" style="margin: 0 !important;">{{student.name_arabic}}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush" style="margin: 0 !important; padding: 0;">
+                          <li class="list-group-item">{{student.major_arabic}}</li>
+                          <li class="list-group-item">المعدل: {{student.average}}</li>
+                        </ul>
+                      </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-footer-ar></app-footer-ar>

@@ -1,0 +1,372 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+
+
+
+
+
+<header>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" *ngIf="center.img_slider_one != null">
+
+
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_one}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_arabic}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/ar/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">الابحاث المنشورة</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">المجلات المعتمدة</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_arabic}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_two != null">
+
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_two}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_arabic}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/ar/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">الابحاث المنشورة</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">المجلات المعتمدة</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_arabic}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_three != null">
+            
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_three}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_arabic}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/ar/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">الابحاث المنشورة</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">المجلات المعتمدة</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_arabic}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_four != null">
+            
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_four}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_arabic}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/ar/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">الابحاث المنشورة</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">المجلات المعتمدة</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_arabic}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div class="arrow"></div>
+
+    
+</header>
+
+
+
+<div class="about-us-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+                <div class="background"
+                    style="background: url(http://localhost:8000{{center.image}}); background-repeat: no-repeat; background-size: cover; border-radius: 4px;">
+                </div>
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>{{center.name_arabic}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box-arabic">
+                        <span [outerHTML]="center.introduction_paragraph_arabic"></span>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mission-and-vision">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop mission-arabic">
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <h2>رؤيتُنا</h2>
+                        <span [outerHTML]="center.vision_arabic"></span>
+                        <h2 style="margin-top: 20px">رسالتُنا</h2>
+                        <span [outerHTML]="center.mission_arabic"></span>
+
+                        <h2 style="margin-top: 20px" *ngIf="center.display_url == 'scientific_research'">القيم</h2>
+                        <ul *ngIf="center.display_url == 'scientific_research'">
+                          <li>الإلتزام بأخلاقيات البحث العلمي</li>
+                          <li>الأصالة والإبداع</li>
+                          <li>الريادة والإبتكار</li>
+                          <li>الإحترافية والشفافية</li>
+                          <li>التعاون والمسؤولية المشتركة وخدمة المجتمع المحلي</li>
+                           <li>الجودة العالية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 prop2 mission-arabic">
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <h2>أهدافُنا</h2>
+                        <span [outerHTML]="center.objectives_arabic"></span>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="Why-choose-us" *ngIf="center.services.length != 0">
+    <div class="container">
+        <div class="why-us Why-choose-p-arabic">
+            <div class="row title">
+                <div class="col-md-12 colorlib-heading animate-box">
+                    <h2>الخدمات</h2>
+                    <hr>
+                </div>
+            </div>
+            <span [outerHTML]="center.services_paragraph_arabic"></span>
+
+            <div class="row context">
+                <div class="col-lg-3 section" *ngFor="let service of center.services">
+                    <div class="icon">
+                        <i class="{{service.icon}} fa-5x circle-icon"></i>
+                    </div>
+                    <h4>{{service.title_arabic}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dean" *ngIf="center.director != null">
+    <div class="background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="picture">
+                    <img *ngIf="center.director.staffurl == 'nostaff'" src="http://localhost:8000{{center.director.image}}" alt="">
+                    <img *ngIf="center.director.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/ar/staff/{{center.director.staffurl}}" src="http://localhost:8000{{center.director.image}}" alt="">
+
+                    <h4>{{center.director.name_arabic}}</h4>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="prop dirctor-arabic">
+                    <span [outerHTML]="center.director_paragraph_arabic"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="staff" *ngIf="center.staffs.length != 0">
+    <div class="container">
+        <h2>الموظفين</h2>
+        <hr>
+
+        <div class="assistant">
+            <div class="row" *ngIf="center.director_assistant != null">
+                <div class="col-md-12">
+                    <div class="picture">
+                        <img *ngIf="center.director_assistant.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/ar/staff/{{center.director_assistant.staffurl}}" src="http://localhost:8000{{ center.director_assistant.image }}" alt="" />
+                        <img *ngIf="center.director_assistant.staffurl == 'nostaff'" src="http://localhost:8000{{ center.director_assistant.image }}" alt="" />
+                        
+                        <h4 style="margin-bottom: 0;">{{ center.director_assistant.name_arabic }}</h4>
+                        <h4>{{ center.director_assistant.postion_arabic }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pictures">
+            <div class="row">
+                <div class="col-md-4 pic" *ngFor="let staff of center.staffs">
+                    <img *ngIf="staff.staffurl == 'nostaff'" src="http://localhost:8000{{staff.image}}" alt="">
+                    <img *ngIf="staff.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/ar/staff/{{staff.staffurl}}" src="http://localhost:8000{{staff.image}}" alt="">
+                   
+                    <h4>{{staff.name_arabic}}</h4>
+                    <h4>{{staff.postion_arabic}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<div class="list_requirements_three" *ngIf="center.display_url == 'scientific_research'">
+    <div class="container">
+        <div class="row lists">
+            <div class="col-md-6 list">
+                <h2>المهمات</h2>
+                <p>يتولى العميد المهمات والصلاحيات التالية:</p>
+                <ul>
+                    <li>إعداد مشروع الموازنة السنوية لعمادة البحث العلمي.</li>
+                    <li>تنفيذ سياسة الجامعة الخاصة بالبحث العلمي من حيث التنظيم والدعم والنشر.</li>
+                    <li>السعي لإيجاد مصادر تمويل للبحث العلمي من داخل الجامعة وخارجها.</li>
+                    <li>جمع المعلومات عن مشروعات البحث العلمي في الجامعة، والعمل على متابعتها.</li>
+                    <li>الإتصال بالمؤسسات والمراكز ذات العلاقة بالبحث العلمي داخل المملكة وخارجها والتنسيق معها.</li>
+                    <li>تقديم تقارير دورية حول البحث العلمي في الجامعة.</li>
+                    <li>أي أمور أخرى تتعلق بالبحث العلمي.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 list">
+                <h2>إنجازات العمادة</h2>
+                <ul>
+                    <li>إعداد تعليمات وأسس دعم مشاريع البحث العلمي.</li>
+                    <li>إعداد تعليمات وأسس دعم حضور المؤتمرات العلمية المحكمة.</li>
+                    <li>إعداد أسس دعم النشر في مجلات علمية محكمة ومتخصصة.</li>
+                    <li>إعداد أسس تقديم مكافآت لأعضاء هيئة التدريس مقابل نشرهم بحوث في مجلات عالمية محكمة ومتخصصة لها
+                        معامل تأثير (Impact Factor).</li>
+
+                    <li>تطوير نماذج البحث العلمي تتوافق مع متطلبات نظام إدارة ضمان الجودة في الجامعة في جميع المجالات
+                        المتعلقة بالبحث العلمي.</li>
+                    <li>بناء قاعدة بيانات لمشاريع البحوث العلمية المدعومة والبحوث المنشورة في مجلات ومؤتمرات علمية محكمة
+                        ومتخصصة.</li>
+                    <li>زيادة سبل التعاون والتواصل مع الجهات المعنية بالبحث العلمي داخل الأردن "الجامعات، والمجلس الأعلى
+                        للعلوم والتكنولوجيا، وصندوق دعم البحث العلمي، ومشروع دعم البحث والتطوير التكنولوجي والإبداع في
+                        الأردن (SRTD II).</li>
+                    <li>زيادة سبل التعاون مع جهات إقليمية ودولية مهتمة بالبحث العلمي "الاتحاد الأوروبي، والشبكة العربية
+                        للبحث العلمي، واتحاد الجامعات العربية، واتحاد جامعات العالم الإسلامي".</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+ -->
+
+<!-- 
+<div class="list_requirements_two" *ngIf="center.display_url == 'scientific_research'">
+    <div class="container">
+       
+      
+        <div class="row lists">
+            <div class="col-md-6 list">
+                <h2>مجلس البحث العلمي</h2>
+                <p>يشرف مجلس البحث العلمي على البحث العلمي والنشر العلمي، برأسه عميد البحث العلمي ويضم المجلس ممثلي
+                    الكليات المختلفة في الجامعة وممثلين عن المجتمع المحلي من ذوي الاختصاص والخبرة، ويتولى مجلس البحث
+                    العلمي المهام والصلاحيات التالية:</p>
+                <ul>
+                    <li>يقترح السياسة العامة للبحث العلمي وأولوياته في الجامعة ووسائل تنفيذها.</li>
+                    <li>وضع مشروع خطة البحث العلمي وأسس التعاون والتنسيق مع الجهات الأخرى ذات الصلة بالبحث العلمي.</li>
+                    <li>إعداد مشروعات التعليمات اللازمة لتنظيم شؤون البحث العلمي وتشجيعه وتنسيقه ودعمه ومتابعته وتقييمه
+                        ونشره.</li>
+                    <li>وضع وتنفيذ الأسس والشروط اللازمة لحفظ حقوق الجامعة والباحثين في البحوث العلمية التي تجري في
+                        الجامعة أو بمشاركتها أو بنتائج هذه البحوث.</li>
+                    <li>مناقشة مخصصات البحث العلمي والتوصية لإدراجها ضمن موازنة الجامعة.</li>
+                    <li>التوصية بقديم الدعم لنشر المؤلفات القيمة والنظر في إجازة المخطوطات المؤلفة والمحققة والمترجمة
+                        بعد تقييمها.</li>
+                    <li>النظر في مشروعات البحوث العلمية وإقرارها.</li>
+                    <li>إقرار التقرير السنوي لعمادة البحث العلمي.</li>
+                    <li>النظر في أي أمور أخرى تتعلق بالبحث العلمي.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 list">
+                <h2>الترجمة والنشر</h2>
+                <p>يشرف على إعداد لوائح وتعليمات دعم الإنتاج العلمي ونشره في الجامعة وستقوم العمادة باستقبال الأبحاث
+                    والكتب والدراسات المؤلفة والمترجمة وتقويمها، وإعدادها للنشر ضمن آلية تضمن حقوق الجامعة من ناحية،
+                    وحقوق المؤلفين من ناحية أخرى.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<app-footer-ar></app-footer-ar>

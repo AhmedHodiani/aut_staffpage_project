@@ -1,0 +1,553 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1320px !important;
+    }
+}
+
+.container {}
+
+@font-face {
+    font-family: Proxima-Nova-Alt;
+    src        : url("assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Bold.otf");
+}
+
+@font-face {
+    font-family: Proxima-Nova-Alt-Light;
+    src        : url("assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Light.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src        : url("assets/fonts/Merriweather/Merriweather-Bold.otf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src        : url("assets/fonts/Merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: Palatino-Linotype;
+    src        : url("assets/fonts/Palatino-Linotype/pala\ bold.ttf");
+}
+
+@font-face {
+    font-family: Cairo;
+    src        : url("assets/fonts/Cairo/Cairo-Black.ttf");
+}
+
+@font-face {
+    font-family: Tajawal;
+    src        : url("assets/fonts/Tajawal/Tajawal-Medium.ttf");
+}
+
+@font-face {
+    font-family: Tajawal-Bold;
+    src        : url("assets/fonts/Tajawal/Tajawal-ExtraBold.ttf");
+}
+
+$heading-font  :Cairo;
+$pargraphs-font:Tajawal;
+$bottons-font  :Tajawal-Bold;
+
+$primary-blue      : #181e38;
+$primary-light-blue: #272e4a;
+$primary-white     : #f7f7f7;
+$primary-yellow    : #FFB93F;
+
+.toggle {
+    width: 183.375px !important;
+    height: 39px !important;
+}
+.animate-boxx {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size       : 23.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        p {
+            font-size       : 20.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        p {
+            font-size       : 18.25px;
+            // margin-bottom: 15px;
+        }
+    }
+
+    strong {
+        margin-bottom: 0px;
+        color        : $primary-blue;
+        font-family  : Proxima-Nova-Alt-Light;
+        opacity      : 1;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 10px;
+        font-family  : Proxima-Nova-Alt-Light;
+        color        : $primary-blue;
+        opacity      : 0.95;
+    }
+}
+
+
+
+
+.mission {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size    : 24.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        h2 {
+            font-size    : 30px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size    : 20.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        h2 {
+            font-size    : 25px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size    : 18.25px;
+            margin-bottom: 16px;
+        }
+    }
+
+    p {
+        text-align: justify;
+        font-family: Proxima-Nova-Alt-Light;
+        font-weight: 600;
+        color      : $primary-blue;
+        opacity    : 0.8;
+        margin     : 0;
+    }
+
+
+
+
+
+
+
+
+
+    @media only screen and (min-width: 600px) {
+        li {
+            font-size    : 22.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        li {
+            font-size    : 18.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        li {
+            font-size    : 17.25px;
+            margin-bottom: 15px;
+        }
+    }
+
+    li {
+        text-align: justify;
+        font-family: Proxima-Nova-Alt-Light;
+        font-weight: 600;
+        color      : $primary-blue;
+        opacity    : 0.8;
+        margin     : 0;
+    }
+}
+
+
+
+
+
+.Why-choose-p {
+    p {
+
+        font-family   : Proxima-Nova-Alt-Light;
+        padding-bottom: 50px;
+        color         : $primary-blue;
+        text-align    : center;
+        opacity       : 0.9;
+        width         : 70%;
+        margin        : 0 auto;
+    }
+}
+
+
+
+.dirctor {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size       : 23.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        p {
+            font-size       : 20.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        p {
+            font-size       : 18.25px;
+            // margin-bottom: 15px;
+        }
+    }
+
+    strong {
+        margin-bottom: 0px;
+        color        : $primary-white;
+        font-family  : Proxima-Nova-Alt-Light;
+        opacity      : 0.95;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 10px;
+        font-family  : Proxima-Nova-Alt-Light;
+        color        : $primary-white;
+        opacity      : 0.95;
+    }
+}
+
+
+// --------------------- arabic -------------- //
+
+
+.animate-box-arabic {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size       : 23.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        p {
+            font-size       : 20.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        p {
+            font-size       : 18.25px;
+            // margin-bottom: 15px;
+        }
+    }
+
+    strong {
+        margin-bottom: 0px;
+        color        : $primary-blue;
+        font-family  : $pargraphs-font;
+        opacity      : 1;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 10px;
+        font-family  : $pargraphs-font;
+        color        : $primary-blue;
+        opacity      : 0.95;
+    }
+}
+
+
+
+
+.mission-arabic {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size    : 24.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        h2 {
+            font-size    : 30px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size    : 20.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        h2 {
+            font-size    : 25px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size    : 18.25px;
+            margin-bottom: 16px;
+        }
+    }
+
+    p {
+        text-align: justify;
+        font-family: $pargraphs-font;
+        font-weight: 600;
+        color      : $primary-blue;
+        opacity    : 0.8;
+        margin     : 0;
+    }
+
+
+
+
+
+
+
+
+
+    @media only screen and (min-width: 600px) {
+        li {
+            font-size    : 22.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        li {
+            font-size    : 18.25px;
+            margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        li {
+            font-size    : 17.25px;
+            margin-bottom: 15px;
+        }
+    }
+
+    li {
+        text-align : right;
+        font-family: $pargraphs-font;
+        font-weight: 600;
+        color      : $primary-blue;
+        opacity    : 0.8;
+        margin     : 0;
+    }
+}
+
+
+
+
+
+.Why-choose-p-arabic {
+    p {
+        font-family   : $pargraphs-font;
+        padding-bottom: 50px;
+        color         : $primary-blue;
+        text-align    : center;
+        opacity       : 0.9;
+        width         : 70%;
+        margin        : 0 auto;
+    }
+}
+
+
+
+.dirctor-arabic {
+    @media only screen and (min-width: 600px) {
+        p {
+            font-size       : 23.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        p {
+            font-size       : 20.25px;
+            // margin-bottom: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        p {
+            font-size       : 18.25px;
+            // margin-bottom: 15px;
+        }
+    }
+
+    strong {
+        margin-bottom: 0px;
+        color        : $primary-white;
+        font-family  : $pargraphs-font;
+        opacity      : 1;
+    }
+
+    p {
+        text-align: justify;
+
+        margin-bottom: 10px;
+        font-family  : $pargraphs-font;
+        color        : $primary-white;
+        opacity      : 0.95;
+    }
+}
+
+
+iframe {
+    width: 100%;
+    height: 35vw;
+}
+$primary-blue      : #181e38;
+
+
+.htmll {
+    p {
+        margin: 0;
+        padding-bottom: 20px;
+        font-family: Proxima-Nova-Alt;
+        font-size: 20px;
+        opacity: 0.7;
+        // margin: 0 10px;
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    hr {
+        border-top   : solid $primary-blue 3px;
+        width        : 50px;
+        margin       : auto;
+        margin-bottom: 40px;
+    }
+
+    .hr {
+        border-top   : solid $primary-blue 3px;
+        opacity: 0.5;
+        // margin       : auto;
+        width: auto;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    li {
+        margin: 0;
+        font-family: Proxima-Nova-Alt;
+        font-size: 20px;
+        opacity: 0.7;
+    }
+
+    h5 {
+        margin: 0;
+        font-family: Proxima-Nova-Alt;
+        font-size: 20px;
+        padding: 30px 0 10px;
+    }
+
+    .album {
+        img {
+            width: 100%;
+        }
+
+        .col-md-3 {
+            padding: 10px;
+        }
+    }
+}
+
+
+.htmllarabic {
+    p {
+        margin: 0;
+        padding-bottom: 20px;
+        font-family: $pargraphs-font;
+        font-size: 20px;
+        opacity: 0.7;
+        // margin: 0 10px;
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    hr {
+        border-top   : solid $primary-blue 3px;
+        width        : 50px;
+        margin       : auto;
+        margin-bottom: 40px;
+    }
+
+    .hr {
+        border-top   : solid $primary-blue 3px;
+        opacity: 0.5;
+        // margin       : auto;
+        width: auto;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    li {
+        margin: 0;
+        font-family: $pargraphs-font;
+        font-size: 20px;
+        opacity: 0.7;
+    }
+
+    h5 {
+        margin: 0;
+        font-family: $pargraphs-font;
+        font-size: 20px;
+        padding: 30px 0 10px;
+    }
+
+    .album {
+        img {
+            width: 100%;
+        }
+
+        .col-md-3 {
+            padding: 10px;
+        }
+    }
+}

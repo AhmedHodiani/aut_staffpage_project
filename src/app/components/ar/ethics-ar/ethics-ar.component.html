@@ -1,0 +1,43 @@
+<app-navbar-ar></app-navbar-ar>
+
+<!-- <header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>ميثاق الاخلاقيات</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header> -->
+
+
+
+<div class="ethics" style="padding-top: 70px;">
+    <h1>ميثاق الاخلاقيات في جامعة العقبة للتكنولوجيا</h1>
+    <div class="container" style="padding-top: 20px;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+
+            <li class="nav-item" *ngFor="let language of languages">
+              <a (click)="makeActive(language.id)" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{{language.language}}</a>
+            </li>
+            
+          </ul>
+
+        <div *ngFor="let paragraph of active.paragraphs">
+          <p style="text-align: left; direction: ltr;" *ngIf="active.direction == 'left to right'">{{paragraph.paragraph}}</p>
+          <p class="arabic" style="text-align: right; direction: rtl;" *ngIf="active.direction != 'left to right'">{{paragraph.paragraph}}</p>
+        </div>
+
+        <button style="margin-right: 6px;" *ngFor="let button of active.buttons" class="btn btn-warning" routerLink="/en/ethics"><a target="_blank" href="{{button.pdf}}">{{button.button_name}}</a></button>
+        
+
+
+    </div>
+</div>
+
+
+
+<app-footer-ar></app-footer-ar>

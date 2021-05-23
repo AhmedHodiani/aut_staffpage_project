@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Proxima-Nova-Alt;
+    src        : url("../../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Bold.otf");
+}
+
+@font-face {
+    font-family: Proxima-Nova-Alt-Light;
+    src        : url("../../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Light.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src        : url("../../../../../assets/fonts/Merriweather/Merriweather-Bold.otf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src        : url("../../../../../assets/fonts/Merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: Palatino-Linotype;
+    src        : url("../../../../../assets/fonts/Palatino-Linotype/pala\ bold.ttf");
+}
+
+@font-face {
+    font-family: Cairo;
+    src        : url("../../../../../assets/fonts/Cairo/Cairo-Black.ttf");
+}
+
+@font-face {
+    font-family: Tajawal;
+    src        : url("../../../../../assets/fonts/Tajawal/Tajawal-Medium.ttf");
+}
+
+@font-face {
+    font-family: Tajawal-Bold;
+    src        : url("../../../../../assets/fonts/Tajawal/Tajawal-ExtraBold.ttf");
+}
+
+$heading-font  :Cairo;
+$pargraphs-font:Tajawal;
+$bottons-font  :Tajawal-Bold;
+
+$primary-blue      : #181e38;
+$primary-light-blue: #272e4a;
+
+$primary-white : #f7f7f7;
+$primary-yellow: #FFB93F;
+
+
+
+
+
+
+
+
+
+@media (max-width: 990px) {
+
+    .footer {
+        text-align: right;
+
+        .space {
+            padding  : 20px 15px;
+            max-width: 600px;
+
+            .parg {
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 990px) {
+    .footer {
+        text-align: right;
+
+        .space {
+            .parg {
+                padding-left: 3rem;
+            }
+        }
+    }
+}
+
+.footer {
+    overflow  : hidden;
+    direction : rtl;
+    text-align: right;
+    background: $primary-light-blue;
+    color     : $primary-white !important;
+    margin    : 0;
+
+    h4 {
+        font-family: $heading-font;
+    }
+
+    .icn {
+        font-size : 25px;
+        margin-top: 3px;
+        color     : $primary-white;
+
+        &:hover {
+            color: $primary-yellow;
+        }
+    }
+
+    .links {
+        ul {
+            list-style-type: none;
+        }
+
+        li a {
+            color      : rgba(255, 255, 255, 0.726);
+            transition : color .2s;
+            font-family: $pargraphs-font;
+
+            &:hover {
+                text-decoration: none;
+                color          : $primary-white;
+            }
+        }
+    }
+
+    .about-company {
+        i {
+            font-size: 25px;
+        }
+
+        a {
+            color     : $primary-white;
+            transition: color .2s;
+
+            &:hover {
+                color: $primary-yellow
+            }
+        }
+    }
+
+    .location {
+        i {
+            font-size: 18px;
+        }
+
+        p {
+            color     : rgba(255, 255, 255, 0.726);
+            transition: color .2s;
+
+            &:hover {
+                color: $primary-white
+            }
+
+            a {
+                color: rgba(255, 255, 255, 0.726);
+
+            }
+
+        }
+    }
+
+    .copyright p {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+}

@@ -1,0 +1,440 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Study at AUT</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="one_forms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Personal Information</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full name <span *ngIf="name == '' || name == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="name != '' && name != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" [(ngModel)]="name" name='name' class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">National/Passport Number</label>
+                        <input type="text" [(ngModel)]="national_or_passport_number"
+                            name="national_or_passport_number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="place">Place of Birth <span *ngIf="place_of_birth == '' || place_of_birth == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="place_of_birth != '' && place_of_birth != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="place_of_birth"
+                            name="place_of_birth">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date of Birth <span *ngIf="date_of_birth == '' || date_of_birth == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="date_of_birth != '' && date_of_birth != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="date_of_birth"
+                            name="date_of_birth">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Gender <span *ngIf="gender == '' || gender == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="gender != '' && gender != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <select class="form-control" [(ngModel)]="gender" name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="nationality">Nationality <span *ngIf="nationality == '' || nationality == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="nationality != '' && nationality != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="nationality" name="nationality">
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="exampleFormControlSelect2">Religion</label>
+                        <select class="form-control" [(ngModel)]="religion" name="religion">
+                            <option value="Islam">Islam</option>
+                            <option value="Christianity">Christianity</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div> -->
+
+                    <!-- <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Mailing Address</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="mailing">Mailing Address</label>
+                        <input type="text" class="form-control" [(ngModel)]="mailing_address"
+                            name="mailing_address">
+                        <small id="emailHelp" class="form-text text-muted">In or Out of Jordan...</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span *ngIf="email == '' || email == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="email != '' && email != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="email" class="form-control" [(ngModel)]="email" name="email">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">Phone No. <span *ngIf="phone == '' || phone == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="phone != '' && phone != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="phone" name="phone">
+                    </div>
+
+
+                    <!-- <div class="form-group">
+                        <label for="fix">Telephone Fix</label>
+                        <input type="text" class="form-control" [(ngModel)]="telephone_fix"
+                            name="telephone_fix">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fax">Fax No.</label>
+                        <input type="text" class="form-control" [(ngModel)]="fax" name="fax">
+                    </div> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="two_forms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Breadwinner Information</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="Breadwinnername">Breadwinner Name <span *ngIf="breadwinner_name == '' || breadwinner_name == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="breadwinner_name != '' && breadwinner_name != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="breadwinner_name"
+                            name="breadwinner_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Relative Relation <span *ngIf="relative_relation == '' || relative_relation == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="relative_relation != '' && relative_relation != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <select class="form-control" [(ngModel)]="relative_relation" name="relative_relation">
+                            <option value="Father">Father</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number">National/Passport Number</label>
+                        <input type="text" class="form-control"
+                            [(ngModel)]="breadwinner_national_or_passport_number"
+                            name="breadwinner_national_or_passport_number">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="bphone">Phone No. <span *ngIf="breadwinner_phone == '' || breadwinner_phone == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="breadwinner_phone != '' && breadwinner_phone != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="breadwinner_phone"
+                            name="breadwinner_phone">
+                    </div>
+
+
+
+                    <!-- <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                </form>
+            </div>
+
+            <!-- <div class="col-md-6">
+                <h2>Knowen People</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name1">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="knowen_people_one_name"
+                            name="knowen_people_one_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone2">Phone No.</label>
+                        <input type="text" class="form-control" [(ngModel)]="knowen_people_one_phone"
+                            name="knowen_people_one_phone">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="name2">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="knowen_people_two_name"
+                            name="knowen_people_two_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone3">Phone No.</label>
+                        <input type="text" class="form-control" [(ngModel)]="knowen_people_two_phone"
+                            name="knowen_people_two_phone">
+                    </div>
+
+
+                </form>
+            </div> -->
+
+            <div class="col-md-6">
+                <h2 style="margin-top: 20px;">High School</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="mailing">Country of Issue <span *ngIf="high_school_country == '' || high_school_country == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="high_school_country != '' && high_school_country != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="high_school_country"
+                            name="high_school_country">
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">High School Branch <span *ngIf="high_school_branch == '' || high_school_branch == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="high_school_branch != '' && high_school_branch != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="high_school_branch"
+                            name="high_school_branch">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="phone">Average <span *ngIf="high_school_average == '' || high_school_average == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="high_school_average != '' && high_school_average != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="high_school_average"
+                            name="high_school_average">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="fix">Year of Issue <span *ngIf="high_school_year == '' || high_school_year == undefined"><i style="color: red;" class="fas fa-circle"></i></span><span *ngIf="high_school_year != '' && high_school_year != undefined"><i style="color: rgb(13, 255, 0);" class="fas fa-circle"></i></span></label>
+                        <input type="text" class="form-control" [(ngModel)]="high_school_year"
+                            name="high_school_year">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fax">School Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="high_school_name"
+                            name="high_school_name">
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2 style="margin-top: 20px;">Documents</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">High school disclosure</label>
+                        <input type="file" class="form-control-file" name="document_one" (change)="onChangeOne($event)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Passport or ID</label>
+                        <input type="file" class="form-control-file" name="document_two" (change)="onChangeTwo($event)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">University or college transcripts, if any</label>
+                        <input type="file" class="form-control-file" name="document_three" (change)="onChangeThree($event)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Other</label>
+                        <input type="file" class="form-control-file" name="document_four" (change)="onChangeFour($event)">
+                    </div>
+                    <p>You can upload a zipped file!</p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="items">
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne">
+                            Diploma for bridging students
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <h2 style="margin-top: 20px;">Diploma for bridging students</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="mailing">Country of Issue</label>
+                                <input type="text" class="form-control" [(ngModel)]="bridging_country"
+                                    name="bridging_country">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Major</label>
+                                <input type="text" class="form-control" [(ngModel)]="bridging_major"
+                                    name="bridging_major">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="phone">Average</label>
+                                <input type="text" class="form-control" [(ngModel)]="bridging_average"
+                                    name="bridging_average">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="fix">Year of Issue</label>
+                                <input type="text" class="form-control" [(ngModel)]="bridging_year"
+                                    name="bridging_year">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fax">University / College</label>
+                                <input type="text" class="form-control" [(ngModel)]="bridging_collage_name"
+                                    name="bridging_collage_name">
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Transfer from another university
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <h2 style="margin-top: 20px;">Transfer from another university</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="mailing">Country of Issue</label>
+                                <input type="text" class="form-control" [(ngModel)]="transfer_country"
+                                    name="transfer_country">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fax">University / College</label>
+                                <input type="text" class="form-control" [(ngModel)]="transfer_collage_name"
+                                    name="transfer_collage_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Major</label>
+                                <input type="text" class="form-control" [(ngModel)]="transfer_major"
+                                    name="transfer_major">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="phone">Average</label>
+                                <input type="text" class="form-control" [(ngModel)]="transfer_average"
+                                    name="transfer_average">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="fix">Year of Issue</label>
+                                <input type="text" class="form-control" [(ngModel)]="transfer_year"
+                                    name="transfer_year">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Degree and major
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <h2 style="margin-top: 20px;">Degree and major</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Required degree</label>
+                                    <select class="form-control" [(ngModel)]="degree_and_major_required_degree"
+                                        name="degree_and_major_required_degree">
+                                        <option value="Bachelor">Bachelor</option>
+                                        <option value="Master">Master</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Major</label>
+                                    <input type="text" class="form-control" [(ngModel)]="degree_and_major_major"
+                                        name="degree_and_major_major">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Semester</label>
+                                    <select class="form-control" [(ngModel)]="degree_and_major_semester"
+                                        name="degree_and_major_semester">
+                                        <option value="First">First</option>
+                                        <option value="Second">Second</option>
+                                        <option value="Summer">Summer</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="number">Academic Year</label>
+                                    <input type="text" class="form-control" id="number"
+                                        [(ngModel)]="degree_and_major_academic_year"
+                                        name="degree_and_major_academic_year">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <input type="file" name="profile" (change)="onChange($event)" />
+        <button type="submit">Upload Image File</button>
+
+    </form>
+</div> -->
+
+<button class="btn btn-warning" (click)="onSubmit()">Apply at AUT</button>
+<p class="massage" *ngIf="show">The Submission Has Been Sent Successfully</p>
+<p class="error" *ngIf="showError">Please Fill All Required Fields</p>
+
+<app-footer-en></app-footer-en>

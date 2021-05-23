@@ -1,0 +1,822 @@
+@font-face {
+    font-family: Proxima-Nova-Alt;
+    src        : url("../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Bold.otf");
+}
+
+@font-face {
+    font-family: Proxima-Nova-Alt-Light;
+    src        : url("../../../../assets/fonts/Proxima-Nova-Alt/Proxima\ Nova\ Alt\ Light.otf");
+}
+
+@font-face {
+    font-family: Merriweather;
+    src        : url("../../../../assets/fonts/Merriweather/Merriweather-Bold.otf");
+}
+
+@font-face {
+    font-family: Merriweather-Light;
+    src        : url("../../../../assets/fonts/Merriweather/Merriweather-Regular.otf");
+}
+
+@font-face {
+    font-family: Palatino-Linotype;
+    src        : url("../../../../assets/fonts/Palatino-Linotype/pala\ bold.ttf");
+}
+
+$primary-blue      : #181e38;
+$primary-light-blue: #272e4a;
+
+$primary-white : #f7f7f7;
+$primary-yellow: #FFB93F;
+
+
+
+
+
+
+
+
+
+
+
+
+.colorlib-nav ul li.activee>a {
+    color   : white;
+    position: relative;
+    position: relative;
+}
+
+
+
+
+.arrow {
+    position        : absolute;
+    bottom          : 0;
+    width           : 100%;
+    padding-bottom  : 40px;
+    background-color: #f1f1f1;
+}
+
+.arrow:before,
+.arrow:after {
+    content         : '';
+    position        : absolute;
+    bottom          : 100%;
+    width           : 50%;
+    padding-bottom  : inherit;
+    background-color: inherit;
+}
+
+.arrow:before {
+    right                   : 50%;
+    -ms-transform-origin    : 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin        : 100% 100%;
+    -ms-transform           : skewX(45deg);
+    -webkit-transform       : skewX(45deg);
+    transform               : skewX(45deg);
+}
+
+.arrow:after {
+    left                    : 50%;
+    -ms-transform-origin    : 0 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin        : 0 100%;
+    -ms-transform           : skewX(-45deg);
+    -webkit-transform       : skewX(-45deg);
+    transform               : skewX(-45deg);
+}
+
+
+
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    .background {
+        position         : absolute;
+        width            : 100%;
+        height           : 100%;
+        background       : url("../../../../assets/images/AUT-university-bg.png");
+        background-size  : cover;
+        background-repeat: no-repeat;
+        z-index          : -2;
+    }
+
+    .mask {
+        z-index: 100;
+
+        @media (max-width: 575px) {
+            img {
+                margin: 0 15px;
+            }
+        }
+
+        .img {
+            position: absolute;
+            right   : 0;
+            z-index : -10;
+            top     : 0;
+
+            img {}
+        }
+
+        .container {
+
+            @media only screen and (min-width: 755px) {
+                .context {
+                    padding-top   : 13%;
+                    padding-bottom: 18%;
+
+                    h1 {
+                        font-size  : 53px;
+                        line-height: 81px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 755px) {
+                .context {
+                    padding-top   : 13%;
+                    padding-bottom: 24%;
+
+
+
+                    h1 {
+                        font-size  : 40px;
+                        line-height: 64px;
+
+                        span {
+                            padding: 5px 26px 5px 15px;
+                        }
+
+                    }
+                }
+
+            }
+
+            @media only screen and (max-width: 500px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 27%;
+
+
+                    h1 {
+                        font-size  : 30px;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 425px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 30%;
+
+
+                    h1 {
+                        font-size  : 145%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 365px) {
+                .context {
+                    padding-top   : 15%;
+                    padding-bottom: 33%;
+
+
+                    h1 {
+                        font-size  : 137%;
+                        line-height: 50px;
+
+                        span {
+                            padding: 10px 26px 10px 15px;
+                        }
+
+                    }
+                }
+            }
+
+            .context {
+                text-align: center;
+
+                h1 {
+                    font-family: Palatino-Linotype;
+                }
+
+                h1 {
+                    font-family: Palatino-Linotype;
+                    color      : $primary-white;
+
+                    span {
+                        background-color: #181e3878;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.about-us-one {
+    overflow        : hidden;
+    background-color: #f1f1f1;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 0px 15px 70px;
+
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 40px 15px 100px;
+
+        }
+    }
+
+    .container {
+
+
+        .row {
+            .space {
+                padding: 0 20px;
+
+                .background {
+                    background         : url("../../../../assets/images/AUT-university-bg.png");
+                    background-repeat  : no-repeat;
+                    background-position: center;
+                    background-size    : cover;
+                    box-shadow         : -26px 26px 78px -34px rgba(0, 0, 0, 0.425);
+                    border-radius      : 4px;
+                    width              : 100%;
+                    height             : 100%;
+                }
+            }
+
+            .spacee {
+                padding: 0 20px;
+
+                .background {
+                    background         : url("../../../../assets/images/AUT-university-bg.png");
+                    background-repeat  : no-repeat;
+                    background-position: center;
+                    background-size    : cover;
+                    box-shadow         : 26px 26px 78px -34px rgba(0, 0, 0, 0.425);
+                    border-radius      : 4px;
+                    width              : 100%;
+                    height             : 100%;
+                }
+            }
+
+            .prop {
+                padding   : 40px 20px 5px;
+                text-align: left;
+            }
+
+            .colorlib-heading {
+                z-index: 200;
+            }
+
+            .prop {
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 40px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 23.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 20.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 27px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 18.25px;
+                        margin-bottom: 15px;
+
+                    }
+                }
+
+                h2 {
+                    font-family  : Merriweather;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                .p {
+                    margin-bottom: 10px;
+                    color        : $primary-blue;
+                    font-family  : Proxima-Nova-Alt-Light;
+                    opacity      : 1;
+                }
+
+                p {
+                    font-family: Proxima-Nova-Alt-Light;
+                    color      : $primary-blue;
+                    opacity    : 0.95;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.about-us-two {
+    overflow        : hidden;
+    background-color: #f1f1f1;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 40px 15px 40px;
+
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 100px 15px 100px;
+
+        }
+    }
+
+    .container {
+
+
+        .row {
+            @media only screen and (min-width: 768px) {
+                .spacee {
+                    padding: 0 20px;
+
+                    .background {
+                        height: 100%;
+
+                    }
+
+                }
+
+            }
+
+            @media only screen and (max-width: 768px) {
+                .spacee {
+                    padding: 0 15px;
+
+                    .background {
+                        height: 200px;
+
+
+                    }
+
+                }
+            }
+
+            .spacee {
+
+                .background {
+                    background         : url("../../../../assets/images/AUT-university-bg.png");
+                    background-repeat  : no-repeat;
+                    background-position: center;
+                    background-size    : cover;
+                    border-radius      : 4px;
+                    width              : 100%;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                .prop {
+                    padding: 40px 20px 5px;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+                .prop {
+                    padding: 40px 0px 5px;
+                }
+            }
+
+            .prop {
+                text-align: left;
+            }
+
+            .colorlib-heading {
+                z-index: 200;
+            }
+
+            .prop {
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 40px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 23.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 20.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 27px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    p,
+                    .p {
+                        font-size    : 18.25px;
+                        margin-bottom: 15px;
+
+                    }
+                }
+
+                h2 {
+                    font-family  : Merriweather;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                .p {
+                    margin-bottom: 10px;
+                    color        : $primary-blue;
+                    font-family  : Proxima-Nova-Alt-Light;
+                    opacity      : 1;
+                }
+
+                p {
+                    font-family: Proxima-Nova-Alt-Light;
+                    color      : $primary-blue;
+                    opacity    : 0.95;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mission-and-vision {
+    overflow: hidden;
+
+    // background       : linear-gradient(45deg, #090b159c, #181e389c), url("../../../../assets/images/unnamed.jpg") !important;
+    // background-size  : cover;
+    // background-repeat: no-repeat;
+    background       : linear-gradient(45deg, #d69f2278, #ffca339e), url("../../../../assets/images/AUT-aqaba-bg.png");
+    background-size  : cover;
+    background-repeat: no-repeat;
+
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+
+        }
+    }
+
+    .container {
+
+
+        .row {
+
+            .prop {
+                text-align: left;
+
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p {
+                        font-size    : 24.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 30px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    p {
+                        font-size    : 20.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 25px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    p {
+                        font-size    : 18.25px;
+                        margin-bottom: 16px;
+
+                    }
+                }
+
+                h2 {
+                    font-family  : Merriweather;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                p {
+                    font-family: Proxima-Nova-Alt-Light;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.8;
+                    margin     : 0;
+                }
+            }
+
+
+
+
+
+
+            @media only screen and (max-width: 768px) {
+                .prop2 {
+                    margin-top: 20px;
+                }
+            }
+
+            .prop2 {
+                text-align: left;
+
+
+                @media only screen and (min-width: 600px) {
+                    h2 {
+                        font-size    : 35px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    li {
+                        font-size    : 22.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    h2 {
+                        font-size    : 30px;
+                        margin-bottom: 40px;
+
+                    }
+
+                    li {
+                        font-size    : 18.25px;
+                        margin-bottom: 32px;
+
+                    }
+                }
+
+                @media only screen and (max-width: 500px) {
+                    h2 {
+                        font-size    : 25px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    li {
+                        font-size    : 17.25px;
+                        margin-bottom: 15px;
+
+                    }
+                }
+
+                h2 {
+                    font-family  : Merriweather;
+                    margin-bottom: 20px;
+                    color        : $primary-blue;
+                }
+
+                li {
+                    font-family: Proxima-Nova-Alt-Light;
+                    font-weight: 600;
+                    color      : $primary-blue;
+                    opacity    : 0.8;
+                    margin     : 0;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Why-choose-us {
+    overflow        : hidden;
+    background-color: #f1f1f1;
+
+    @media (max-width: 786px) {
+        .container {
+            padding: 70px 15px 70px;
+
+        }
+    }
+
+    @media (min-width: 786px) {
+        .container {
+            padding: 100px 15px 70px;
+
+        }
+    }
+
+    .container {
+
+
+        .why-us {
+            .title {
+                text-align: center;
+
+                @media (max-width: 500px) {
+                    h1 {
+                        font-size: 40px;
+                        bottom   : 10px;
+
+                    }
+                }
+
+                @media (min-width: 500px) {
+                    h1 {
+                        font-size: 50px;
+                        bottom   : 5px;
+
+                    }
+                }
+
+                h1 {
+                    font-family: Merriweather;
+                    right      : 0px !important;
+                    color      : #00000012;
+                }
+
+                h2 {
+                    font-family: Merriweather;
+                    font-weight: 500;
+                }
+            }
+
+            p {
+                font-family   : Merriweather;
+                padding-bottom: 60px;
+                text-align    : center;
+                width         : 90%;
+                margin        : 0 auto;
+
+            }
+
+            .context {
+                .section {
+                    text-align: center;
+
+                    .icon {
+                        .circle-icon {
+                            background    : $primary-blue;
+                            width         : 120px;
+                            height        : 120px;
+                            border-radius : 50%;
+                            text-align    : center;
+                            line-height   : 120px;
+                            vertical-align: middle;
+                            padding       : 33px;
+                            color         : rgba(255, 255, 255, 0.801);
+                        }
+                    }
+
+                    h4 {
+                        padding    : 20px 0 10px;
+                        font-family: Merriweather;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-family: Merriweather;
+
+                    }
+                }
+            }
+
+        }
+    }
+}

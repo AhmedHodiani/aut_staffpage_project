@@ -1,0 +1,58 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>التخصصات</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+
+<div class="programs">
+    <div class="container">
+        <p>{{programs_p}}</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">الكلية</th>
+                    <th scope="col">التخصص</th>
+                    <th scope="col">عدد الساعات</th>
+                    <th scope="col">معدل سنوات الدراسة</th>
+                    <th scope="col">الحد الأدنى لمعدل الثانوية العامه للطلاب الادنيون</th>
+                    <th scope="col">الحد الأدنى لمعدل الثانوية العامه للطلاب غير الادنيون</th>
+                    <th scope="col">رسوم الساعة المعتمدة</th>
+                    <th scope="col">فرع الثانوية العامه </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let program of programs let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{program.college.name_arabic}}</td>
+                    <td>{{program.specialty_arabic}}</td>
+                    <td>{{program.credit_hours}}</td>
+                    <td>{{program.required_years}}</td>
+                    <td>{{program.minimum_average_for_jordanians}}</td>
+                    <td>{{program.minimum_average_for_non_jordanians}}</td>
+                    <td>{{program.credit_hour_fee_jod}}JD / {{program.credit_hour_fee_dollar}} Dollar</td>
+                    <td>{{program.high_school_branch_arabic}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+</div>
+
+<app-footer-ar></app-footer-ar>

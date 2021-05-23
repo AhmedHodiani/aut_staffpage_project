@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home"><i class="fas fa-cog ml-2 mr-2 book"></i><span><strong>AUT
+                Staff</strong></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <h6><i class="fas fa-user mr-2"></i>{{ _authService.username }}</h6>
+                </a>
+                <div style="top: 87%;" class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                    <a (click)="logout()" class="dropdown-item logout">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+    <!-- <h4 class="title">Staff page for <span> s</span></h4> -->
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-2">
+                <div class="image">
+
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="document_one" (change)="onChangeOne($event)">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">Personal Info:</h5>
+                    <form>
+
+
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Name (EN)</label>
+                                <input type="text" [(ngModel)]="name_english" name='name_english' class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Name (AR)</label>
+                                <input type="text" [(ngModel)]="name_arabic" name='name_arabic' class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Short paragraph (EN)</label>
+                                <input type="text" [(ngModel)]="short_paragraph_english" name='short_paragraph_english' class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Short paragraph (AR)</label>
+                                <input type="text" [(ngModel)]="short_paragraph_arabic" name='short_paragraph_arabic' class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label>Phone No.</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date of birth</label>
+                            <input type="text" class="form-control">
+                        </div> -->
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">EN:</label>
+                <textarea [(ngModel)]="long_paragraph_english" name="long_paragraph_english" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+              </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">AR:</label>
+                <textarea [(ngModel)]="long_paragraph_arabic" name="long_paragraph_arabic" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h5>EN:</h5>
+                <ckeditor [editor]="EditorEN" [(ngModel)]="html_english"></ckeditor>
+            </div>
+            <div class="col-md-6">
+                <h5>AR:</h5>
+                <ckeditor [editor]="EditorAR" [(ngModel)]="html_arabic"></ckeditor>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+
+
+
+    <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+    <br><br>
+</div>

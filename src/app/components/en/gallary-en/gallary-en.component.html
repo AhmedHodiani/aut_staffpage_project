@@ -1,0 +1,68 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+
+
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Gallary</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="gallary">
+    <div class="container">
+
+        <div class="btn-list">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>{{selectedAlbum}} Album</h4>
+
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <button class="btn btn-warning" style="margin-right: 7px;"
+                            *ngFor="let album of albums"
+                            (click)="getImages(album.id)">{{album.album_english}}</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <hr class="hr">
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 pic" data-toggle="modal" data-target=".bd-example-modal-lg"
+                *ngFor="let picture of pictures" (click)="selected = picture.image">
+                <img src="{{picture.image}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <img src="{{selected}}" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer-en></app-footer-en>

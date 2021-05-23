@@ -1,0 +1,415 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+<div class="page-heading">
+    <div class="page-heading_background"></div>
+    <div class="page-heading_content">
+        <div class="container li">
+            <h1><span>Aqaba University of</span><br><span>Technology</span></h1>
+            <p>Ambition becomes achievement. Talent becomes success.</p>
+            <button class="btn btn-warning" routerLink="/en/admission/apply" style="background-color: #3dc8ff; border: none;" data-toggle="tooltip" data-placement="top" title="You can apply online">Study at AUT</button>
+            <hr style="margin:8px; border: none">
+
+            <button class="btn btn-warning" routerLink="/en/ethics" style="background-color: #3dc8ff; border: none;">Declaration of Ethics at AUT</button>
+            <hr style="margin:8px; border: none">
+            <button class="btn btn-warning" routerLink="/en/sustain">Together for Sustainability <img style="width: 50px; margin-right: 60px;" src="../../../../assets/images/kisspng-computer-icons-world-health-organization-symbol-un-united-nations-regional-groups-5b353e32c6d196.8650891115302159868144.png" alt=""></button>
+         
+            <hr style="margin:8px; border: none">
+            <button class="btn btn-warning" routerLink="/en/zohair-sebai-program" >Zuhair Al-Sebaei Program for scholarships & loans</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about">
+    <div class="container">
+        <audio controls>
+            <source src="https://sndup.net/2q35/%D9%86%D8%B4%D9%8A%D8%AF+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9+%D8%A7%D9%84%D8%A7%D8%B5%D9%84%D9%8A%D8%A9.mp3" type="audio/mpeg">
+        </audio>
+        <div class="row icons">
+            <div class="col-md col-sm-6 section_icon" routerLink="/en/students" style="cursor: pointer;">
+                <i class="fas fa-user-graduate"></i>
+                <h5>Students</h5>
+            </div>
+
+            
+        <div class="col-md col-sm-6 section_icon" style="cursor: pointer;"
+        (click)="gotoStudentGuide()">
+        <i class="fas fa-book-open"></i>
+        <h5>Student Guide</h5>
+    </div>
+    
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;" data-toggle="modal"
+                data-target="#staticBackdropthree">
+                <i class="fas fa-user"></i>
+                <h5>Staff</h5>
+            </div>
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;" data-toggle="modal"
+                data-target="#staticBackdroptwo">
+                <img src="../assets/images/icons/Rules.svg" alt="">
+                <!-- <h5><a target="_blank" href="{{rulepdf}}">Rules & Regulations</a></h5> -->
+                <h5>Rules & Regulations</h5>
+            </div>
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;"
+                onclick="window.open('http://lms.aut.edu.jo/', '_blank');">
+                <i class="fas fa-laptop"></i>
+                <h5>E-Learning</h5>
+            </div>
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;"
+                (click)="gotocalendar()">
+                <i class="fas fa-calendar-alt"></i>
+                <h5>Calendar</h5>
+            </div>
+
+
+
+        </div>
+        <div class="row about-u">
+            <div class="col-xl-6 about_image">
+                <div id="carouselExampleIndicatorsthree" class="carousel slide" data-ride="carousel"
+                    style="height: 100%; width: 100%;">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background"
+                                style="background-image: url({{picture[0].image}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;"
+                            *ngFor="let img of picture.slice(1)">
+                            <div class="background"
+                                style="background-image: url({{img.image}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-6 about_content">
+                <h2>About the University</h2>
+                <p class="headtitle">Aqaba University of Technology</p>
+                <p>Aqaba University of Technology is the first private university established in southern Jordan, and it
+                    has an ambitious vision to be distinguished, attractive and the preferred choice for students from
+                    Jordan and the region. The university
+                    is located just fifteen kilometers south of the city of Aqaba on the hills overlooking the Gulf of
+                    Aqaba and on a piece of land extending over 500 acres.<br>We committed to providing our students
+                    with high quality expertise of teaching
+                    and learning.</p>
+                <button class="btn btn-warning" routerLink="/en/centers/about">Read More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="colleges">
+    <div class="colleges_background">
+        <div class="container">
+            <h2>Colleges</h2>
+            <hr>
+            <div class="row icons">
+
+                <div class="col-md col-sm-6 section_icon" *ngFor="let college of colleges">
+                    <img src="{{college.icon}}" alt="" routerLink="/en/colleges/{{college.display_url}}"
+                        style="cursor: pointer;">
+                    <h5 routerLink="/en/colleges/{{college.display_url}}" style="cursor: pointer;">
+                        {{college.name_english}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="news">
+    <div class="container">
+        <h2>News</h2>
+        <hr>
+
+        <div class="slideUp" id="news-bar">
+            <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop()"
+                onmouseout="this.start()">
+                <a *ngFor="let newpage of newspage">
+                    <a href="#" class="hvr-float"
+                        routerLink="/en/news/{{newpage.id}}">{{newpage.paragraph_english | truncatetext:60}}</a><a
+                        style="opacity: 0;"> ---- </a>
+                </a>
+            </marquee>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row blogs">
+            <div class="col-lg-6 blog" *ngFor="let news of news" routerLink="/en/news/{{news.id}}"
+                style="cursor: pointer;">
+                <div class="image"
+                    style="background-image: url({{news.image}}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="date">
+                        <h6>{{news.published_date | date: 'd'}}</h6>
+                        <h6>{{news.published_date | date: 'MMM'}}</h6>
+                    </div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <div class="content">
+                    <!-- <p>{{news.paragraph_english | slice:0:200}}...</p> -->
+                    <h4>{{news.head_title_english}}</h4>
+                    <p>{{news.paragraph_english | truncatetext:200}}</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-warning see_more" routerLink="/en/news">See More</button>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="a-e">
+    <div class="row">
+        <div class="col-lg-6 announcements">
+            <div class="announcements_background">
+                <h2>Announcements</h2>
+                <hr>
+                <div class="content">
+                    <div class="announcement" *ngFor="let announcement of announcements">
+                        <h4>{{announcement.head_title_english}}</h4>
+                        <span>{{announcement.published_date | date: 'MMMM d, y'}}</span>
+                        <span style="margin-left: 4px;" *ngIf="announcement.pdf"><a target="_blank"
+                                href="{{announcement.pdf}}">{{announcement.pdf_title_english}}</a></span>
+                    </div>
+                </div>
+                <!-- <button class="btn btn-warning see_more">Read More</button> -->
+            </div>
+        </div>
+        <div class="col-lg-6 events">
+            <div class="events_background">
+                <h2>Events</h2>
+                <hr>
+                <div class="content">
+                    <div class="event" *ngFor="let event of events">
+                        <h4>{{event.head_title_english}}</h4>
+                        <span>{{event.published_date | date: 'MMMM d, y'}}</span>
+                        <span style="margin-left: 4px;" *ngIf="event.pdf"><a target="_blank"
+                                href="{{event.pdf}}">{{event.pdf_title_english}}</a></span>
+                    </div>
+                </div>
+                <!-- <button class="btn btn-warning see_more">Read More</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="figures">
+    <div class="container">
+        <h2>Facts & Figures</h2>
+        <hr>
+        <div class="row icons">
+            <div class="col-lg col-md-4 col-sm-6 section_icon" *ngFor="let figure of figures">
+                <i class="icon {{figure.icon}}"></i>
+                <h5>{{figure.title_english}}</h5>
+                <h1 class="number">{{figure.number}}</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- <div class="charts">
+        <div class="container">
+            <div class="row" style="background-color: white;">
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/1-english.PNG" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/2-english.PNG" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/3-english.PNG" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/4-english.PNG" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/5-arabic.PNG" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="headtitle">Students</h4>
+
+                    <img style="width: 100%" src="../../../../assets/images/aut charts/6-arabic.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="charts">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4" *ngFor="let chart of charts">
+                    <h4 class="headtitle">{{chart.title_english}}</h4>
+                    <apx-chart [states]='chartOptions.states' [colors]="chartOptions.colors" [series]="chart.series" [chart]="chartOptions.chart" [labels]="chart.legend"
+                    [responsive]="chartOptions.responsive" [legend]="chartOptions.legend"></apx-chart>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="students-comments">
+    <div class="students-comments_background">
+        <div class="containerr">
+            <h2>What Our Students Say</h2>
+            <hr>
+
+            <div class="row comments">
+
+                <div class="col-lg-4 comment" *ngFor="let comment of comments">
+                    <div class="icon">
+                        <h6><i class="fas fa-quote-right"></i></h6>
+                    </div>
+                    <p>{{comment.paragraph_english}}</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdroptwo" tabindex="-1" aria-labelledby="staticBackdroptwoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdroptwoLabel">Rules & Regulations</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="item" *ngFor="let rule of rules">
+                    <h4><a target="_blank" href="{{rule.rules_pdf}}">{{rule.name_english}}</a></h4>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="staticBackdropthree" tabindex="-1" aria-labelledby="staticBackdropthreeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropthreeLabel">Staff</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="item">
+                    <h4><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">Lecturers' Portal</a></h4>
+                </div>
+
+                <div class="item">
+                    <h4><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">Staff Portal</a></h4>
+                </div>
+
+                <div class="item">
+                    <h4><a target="_blank"
+                            href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=a002eba4-f257-41b5-b222-27a1c198f97e&protectedtoken=true&nonce=636798550893491178.a867e7fb-ae9a-4a89-bcb3-746a5f3adc31&state=DcvBDYAgDEBR0CGcApUUaHsw7uAGBWv0ZGIwri-H92_fGmP6pmvs3GIwQUKmGGdiCOw90iiUUPHITpTFBSF2uWRwGJLEA2Qv4G17h-n-ZFrlreem-_VoqUt9Xv0B">Email</a>
+                    </h4>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg" id="staticBackdroptwooo" tabindex="-1"
+    aria-labelledby="staticBackdroptwoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropthreeLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <img src="{{starterImage.image}}" alt="">
+        </div>
+    </div>
+</div>

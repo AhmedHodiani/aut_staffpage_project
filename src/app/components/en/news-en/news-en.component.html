@@ -1,0 +1,44 @@
+<app-navbar-en></app-navbar-en>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>News</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+
+
+<div class="news">
+    <div class="container">
+
+        <div class="row blogs">
+            <div class="col-lg-4 blog" *ngFor="let news of news" routerLink="/en/news/{{news.id}}"
+                style="cursor: pointer;">
+                <div class="image"
+                    style="background-image: url({{news.image}}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="date">
+                        <h6>{{news.published_date | date: 'd'}}</h6>
+                        <h6>{{news.published_date | date: 'MMM'}}</h6>
+                    </div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <div class="content">
+                    <!-- <p>{{news.paragraph_english | slice:0:200}}...</p> -->
+                    <p>{{news.paragraph_english | truncatetext:200}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>

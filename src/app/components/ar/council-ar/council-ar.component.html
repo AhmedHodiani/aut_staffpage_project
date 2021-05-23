@@ -1,0 +1,56 @@
+<app-navbar-ar></app-navbar-ar>
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>{{senate.senate_arabic}}</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+<div class="staff">
+    <div class="container">
+
+                <div class="pictures">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pic">
+                                <a *ngIf="senate.staffs[0].cv != ''" target="_blank" href="{{senate.staffs[0].cv}}"><img src="http://localhost:8000{{senate.staffs[0].image}}"
+                                    alt=""></a>
+                                    <a *ngIf="senate.staffs[0].cv == ''"><img src="http://localhost:8000{{senate.staffs[0].image}}"
+                                        alt=""></a>
+
+                                <h5>{{senate.staffs[0].name_arabic}}</h5>
+                                <h5 style="margin-top: -2px;">{{senate.staffs[0].postion_arabic}}</h5>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 pic" *ngFor="let staff of senate.staffs.slice(1)">
+                            <a *ngIf="staff.cv != ''" target="_blank" href="{{staff.cv}}"><img src="http://localhost:8000{{staff.image}}"
+                                alt=""></a>
+                        <a *ngIf="staff.cv == ''"><img src="http://localhost:8000{{staff.image}}"
+                                    alt=""></a>
+
+                            <h5>{{staff.name_arabic}}</h5>
+                            <h5 style="margin-top: -2px;">{{staff.postion_arabic}}</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+        <button style="display: block; margin: auto; padding: 20px 30px; font-weight: bold; color: black !important;" *ngFor="let button of senate.buttons" class="btn btn-warning" routerLink="/en/ethics"><a style="color: black !important;" target="_blank" href="{{button.pdf}}">{{button.button_name}}</a></button>
+
+
+    </div>
+</div>
+
+
+<app-footer-ar></app-footer-ar>

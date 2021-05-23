@@ -1,0 +1,57 @@
+<app-navbar-en></app-navbar-en>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Programs and Fees</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+
+<div class="programs">
+    <div class="container">
+        <p>{{programs_p}}</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Faculty</th>
+                    <th scope="col">Specialty</th>
+                    <th scope="col">Credit Hours</th>
+                    <th scope="col">Required Years</th>
+                    <th scope="col">Minimum Average for jordanians</th>
+                    <th scope="col">Minimum Average for non-jordanians</th>
+                    <th scope="col">Credit hour fee</th>
+                    <th scope="col">High school branch</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let program of programs let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{program.college.name_english}}</td>
+                    <td>{{program.specialty_english}}</td>
+                    <td>{{program.credit_hours}}</td>
+                    <td>{{program.required_years}}</td>
+                    <td>{{program.minimum_average_for_jordanians}}</td>
+                    <td>{{program.minimum_average_for_non_jordanians}}</td>
+                    <td>{{program.credit_hour_fee_jod}}JD / {{program.credit_hour_fee_dollar}} Dollar</td>
+                    <td>{{program.high_school_branch_english}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+<app-footer-en></app-footer-en>

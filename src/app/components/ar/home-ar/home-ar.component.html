@@ -1,0 +1,386 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+
+<div class="page-heading">
+    <div class="page-heading_background"></div>
+    <div class="page-heading_content">
+        <div class="container">
+            <h1><span>جامعة العقبة للتكنولوجيا</span></h1>
+            <p>الطموح يصبح إنجاز.
+                الموهبة تصبح نجاح.</p>
+
+
+
+                <button class="btn btn-warning" routerLink="/ar/ethics" style="background-color: #3dc8ff; border: none;">ميثــــاق الأخلاقيـــات</button>
+                <hr style="margin:8px; border: none">
+                <button class="btn btn-warning" routerLink="/ar/sustain">معاً نحو الأستدامة <img style="width: 30px;" src="../../../../assets/images/kisspng-computer-icons-world-health-organization-symbol-un-united-nations-regional-groups-5b353e32c6d196.8650891115302159868144.png" alt=""></button>
+                <hr style="margin:8px; border: none">
+                <button class="btn btn-warning" routerLink="/ar/admission/apply"  style="background-color: #3dc8ff; border: none;" data-toggle="tooltip" data-placement="top" title="يمكن التقدم بطلب التحاق بالجامعة الكترونياً">الـــــــتــــــحــــــق في الجـــــــــــامــــــــعـــــــة</button>
+                <hr style="margin:8px; border: none">
+                <button class="btn btn-warning" routerLink="/ar/zohair-sebai-program" >برنامج زهير السباعي للمنح و القروض</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about">
+    <div class="container">
+        <audio controls>
+            <source src="https://sndup.net/2q35/%D9%86%D8%B4%D9%8A%D8%AF+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9+%D8%A7%D9%84%D8%A7%D8%B5%D9%84%D9%8A%D8%A9.mp3" type="audio/mpeg">
+        </audio>
+        <div class="row icons">
+            <div class="col-md col-sm-6 section_icon" routerLink="/ar/students" style="cursor: pointer;">
+                <i class="fas fa-user-graduate"></i>
+                <h5>خدمات الطلبة</h5>
+            </div>
+
+                        
+        <div class="col-md col-sm-6 section_icon" style="cursor: pointer;"
+        (click)="gotoStudentGuide()">
+        <i class="fas fa-book-open"></i>
+        <h5>دليل الطالب</h5>
+    </div>
+    
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;" data-toggle="modal" data-target="#staticBackdropthree">
+                <i class="fas fa-user"></i>
+                <h5>خدمات الموظفين</h5>
+            </div>
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;">
+                <img src="../assets/images/icons/Rules.svg" alt="" data-toggle="modal" data-target="#staticBackdroptwo">
+                <h5>الأنظمة والتشريعات</h5>
+            </div>
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;" onclick="window.open('http://lms.aut.edu.jo/', '_blank');">
+                <i class="fas fa-laptop"></i>
+                <h5>التعلم الألكتروني</h5>
+            </div>
+
+            <div class="col-md col-sm-6 section_icon" style="cursor: pointer;" (click)="gotocalendar()">
+                <i class="fas fa-calendar-alt"></i>
+                <h5>التقويم الجامعي</h5>
+            </div>
+
+            <!-- onclick="window.location='https://calendar.google.com/calendar/b/1?cid=YXV0Y2FsZW5kYXJAZ21haWwuY29t';" -->
+
+
+
+        </div>
+        <div class="row about-u">
+            <div class="col-xl-6 about_image">
+                <div id="carouselExampleIndicatorsthree" class="carousel slide" data-ride="carousel"
+                    style="height: 100%; width: 100%;">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background"
+                                style="background-image: url({{picture[0].image}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;"
+                            *ngFor="let img of picture.slice(1)">
+                            <div class="background"
+                                style="background-image: url({{img.image}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-6 about_content">
+                <h2>عن الجامعة</h2>
+                <p class="headtitle">جامعة العقبة للتكنولوجيا</p>
+                <p>إن جامعة العقبة للتكنولوجيا هي مؤسسة وطنية أردنية أنشئت لخدمة المملكة والمنطقة بشكل عام والعقبة بشكل خاص وهي حلقة من حلقات التنمية الشاملة التي يرعاها جلالة الملك عبدالله الثاني في جنوب المملكة. إن وجود الجامعة في منطقة العقبة الاقتصادية الخاصة يعد من عناصر القوة الجاذبة لها لاسيما أنها تقع في منطقة ذات معدلات تنمية استثمارية وسكانية وسياحية أعلى من باقي محافظات المملكة. يوجد حاليا في جامعة العقبة للتكنولوجيا عدد من الكليات المتميزة التي تهم سوق العمل الأردني والعربي ومن أهمها كليات الصيدلة, الهندسة ,العلوم الإدارية والمالية وكلية تكنولوجيا المعلومات وكلية الآداب والعلوم</p>
+                <button class="btn btn-warning" routerLink="/ar/centers/about">إقرء المزيد</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="colleges">
+    <div class="colleges_background">
+        <div class="container">
+            <h2>الكليات</h2>
+            <hr>
+            <div class="row icons">
+
+                <div class="col-md col-sm-6 section_icon" *ngFor="let college of colleges">
+                    <img src="{{college.icon}}" alt="" routerLink="/ar/colleges/{{college.display_url}}"
+                        style="cursor: pointer;">
+                    <h5 routerLink="/ar/colleges/{{college.display_url}}" style="cursor: pointer;">
+                        {{college.name_arabic}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="news">
+    <div class="container">
+        <h2>الأخبار</h2>
+        <hr>
+
+        <div class="slideUp" id="news-bar">
+            <marquee direction="right" scrollamount="3" behavior="scroll" onmouseover="this.stop()"
+                onmouseout="this.start()">
+                <a *ngFor="let newpage of newspage">
+                    <a href="#" class="hvr-float"
+                        routerLink="/en/news/{{newpage.id}}">{{newpage.paragraph_arabic | truncatetext:60}}</a><a
+                        style="opacity: 0;"> ---- </a>
+                </a>
+            </marquee>
+        </div>
+
+
+        <div class="row blogs">
+            <div class="col-lg-6 blog" *ngFor="let news of news" routerLink="/ar/news/{{news.id}}"
+                style="cursor: pointer;">
+                <div class="image"
+                    style="background-image: url({{news.image}}); background-repeat: no-repeat; background-size: cover;">
+                    <div class="date">
+                        <h6>{{news.published_date | date: 'd'}}</h6>
+                        <h6>{{news.published_date | date: 'MMM'}}</h6>
+                    </div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <div class="content">
+                    <!-- <p>{{news.paragraph_english | slice:0:200}}...</p> -->
+                    <h4>{{news.head_title_arabic}}</h4>
+                    <p>{{news.paragraph_arabic | truncatetext:200}}</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-warning see_more" routerLink="/ar/news">المزيد</button>
+    </div>
+</div>
+
+
+
+
+<div class="a-e">
+    <div class="row">
+        <div class="col-lg-6 announcements">
+            <div class="announcements_background">
+                <h2>الاعلانات</h2>
+                <hr>
+                <div class="content">
+                    <div class="announcement" *ngFor="let announcement of announcements">
+                        <h4>{{announcement.head_title_arabic}}</h4>
+                        <span>{{announcement.published_date | date: 'MMMM d, y'}}</span>
+                        <span style="margin-right: 4px;" *ngIf="announcement.pdf"><a target="_blank" href="{{announcement.pdf}}">{{announcement.pdf_title_arabic}}</a></span>
+
+                    </div>
+                </div>
+                <!-- <button class="btn btn-warning see_more">المزيد</button> -->
+            </div>
+        </div>
+        <div class="col-lg-6 events">
+            <div class="events_background">
+                <h2>الفعاليات</h2>
+                <hr>
+                <div class="content">
+                    <div class="event" *ngFor="let event of events">
+                        <h4>{{event.head_title_arabic}}</h4>
+                        <span>{{event.published_date | date: 'MMMM d, y'}}</span>
+                        <span style="margin-right: 4px;" *ngIf="event.pdf"><a target="_blank" href="{{event.pdf}}">{{event.pdf_title_arabic}}</a></span>
+
+                    </div>
+                </div>
+                <!-- <button class="btn btn-warning see_more">المزيد</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="figures">
+    <div class="container">
+        <h2>إحصاءات</h2>
+        <hr>
+        <div class="row icons">
+            <div class="col-lg col-md-4 col-sm-6 section_icon" *ngFor="let figure of figures">
+                <i class="icon {{figure.icon}}"></i>
+                <h5>{{figure.title_arabic}}</h5>
+                <h1 class="number">{{figure.number}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="charts">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4" *ngFor="let chart of charts">
+                <h4 class="headtitle">{{chart.title_arabic}}</h4>
+                <apx-chart [states]='chartOptions.states' [colors]="chartOptions.colors" [series]="chart.series" [chart]="chartOptions.chart" [labels]="chart.legend"
+                [responsive]="chartOptions.responsive" [legend]="chartOptions.legend"></apx-chart>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="students-comments">
+    <div class="students-comments_background">
+        <div class="containerr">
+            <h2>الجامعة في عيون الطلبة</h2>
+            <hr>
+
+            <div class="row comments">
+
+                <div class="col-lg-4 comment" *ngFor="let comment of comments">
+                    <div class="icon">
+                        <h6><i class="fas fa-quote-right"></i></h6>
+                    </div>
+                    <p>{{comment.paragraph_arabic}}</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<app-footer-ar></app-footer-ar>
+
+
+<div class="modal fade" id="staticBackdroptwo" tabindex="-1" aria-labelledby="staticBackdroptwoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdroptwoLabel">القواعد و التشريعات</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="item" *ngFor="let rule of rules">
+            <h4><a target="_blank" href="{{rule.rules_pdf}}">{{rule.name_arabic}}</a></h4>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="staticBackdropthree" tabindex="-1" aria-labelledby="staticBackdropthreeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropthreeLabel">خدمات الموظفين</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="item">
+            <h4><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">بوابة المدرسين</a></h4>
+          </div>
+
+          <div class="item">
+            <h4><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">بوابة الموظفين</a></h4>
+          </div>
+
+          <div class="item">
+            <h4><a target="_blank" href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=a002eba4-f257-41b5-b222-27a1c198f97e&protectedtoken=true&nonce=636798550893491178.a867e7fb-ae9a-4a89-bcb3-746a5f3adc31&state=DcvBDYAgDEBR0CGcApUUaHsw7uAGBWv0ZGIwri-H92_fGmP6pmvs3GIwQUKmGGdiCOw90iiUUPHITpTFBSF2uWRwGJLEA2Qv4G17h-n-ZFrlreem-_VoqUt9Xv0B">البريد الألكتروني</a></h4>
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade bd-example-modal-lg" id="staticBackdroptwooo" tabindex="-1" aria-labelledby="staticBackdroptwoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropthreeLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+       
+         <img src="{{starterImage.image}}" alt="">
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="ethicspopup" tabindex="-1" aria-labelledby="ethicspopupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ethicspopupLabel">خدمات الموظفين</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+asdasdasdasdasdasdasd
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

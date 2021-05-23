@@ -1,0 +1,60 @@
+
+<app-navbar-en></app-navbar-en>
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>{{title}}</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Name</label>
+                      <input type="text" [(ngModel)]="name" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">You can ignore filling this input</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">University ID / Job Number</label>
+                      <input type="text" [(ngModel)]="number" name="number" class="form-control" id="exampleInputPassword1">
+                      <small id="emailHelp" class="form-text text-muted">You can ignore filling this input</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Department</label>
+                        <select [(ngModel)]="department_id" name="department_id" class="form-control" id="exampleFormControlSelect1">
+                            <option>----------</option>
+                            <option *ngFor="let department of departments">{{department.name_english}}</option>
+                        </select>
+                    </div>
+                  </form>
+            </div>
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Massage</label>
+                        <textarea [(ngModel)]="massage" name="massage" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                      </div>
+                </form>
+
+                <p *ngIf="show_true" style="color: rgb(36, 179, 67); font-size: 20px; text-align: left; font-weight: bold;">Your massage has been sent successfully!</p>
+                <p *ngIf="show_false" style="color: rgb(179, 36, 36); font-size: 20px; text-align: left; font-weight: bold;">Something went wrong!</p>
+                <button (click)="sendFeedback()" type="button" class="btn btn-warning">Send</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>

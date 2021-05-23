@@ -1,0 +1,184 @@
+<app-navbar-en></app-navbar-en>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>Published Researches</span></h1>
+                <label class="switch btn-color-mode-switch">
+                    <input type="checkbox" [(ngModel)]="isChecked" (change)="checkValue(isChecked?true:false)" name="color_mode" id="color_mode" value="1">
+                    <label for="color_mode" data-on="All Publications" data-off="Publications in AUT" class="btn-color-mode-switch-inner"></label>
+                </label>
+                <!-- <input type="checkbox" [(ngModel)]="isChecked" (change)="checkValue(isChecked?true:false)" checked data-toggle="toggle" data-on="All Publications" data-off="Publications in AUT" data-onstyle="success" data-offstyle="danger"> -->
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+<div class="researches">
+    <div class="container">
+
+        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"></apx-chart>
+
+
+        <!-- <div class="section" *ngFor="let year of researches">
+            <div class="year">
+                <h1>{{year.year}}</h1>
+            </div>
+
+            <ul>
+                <li *ngFor="let research of year.researches" style="padding: 10px 0;">
+                    <p *ngIf="research.research_english" style="text-align: left; direction: ltr; margin: 0;">{{research.research_english}}</p>
+                    <p *ngIf="research.research_arabic" style="text-align: right; direction: rtl; margin: 0;">{{research.research_arabic}}</p>
+                    
+                </li>
+            </ul>
+        </div> -->
+
+    </div>
+</div>
+
+
+
+<div class="colleges">
+    <div class="colleges_background">
+        <div class="container">
+            <br>
+            <h2>Number of Publications in Colleges of AUT</h2>
+            <hr> 
+            <div class="row icons">
+
+                <div class="col-md col-sm-6 section_icon" *ngFor="let college of colleges">
+                    <div style='background-color: #f7edce56; border-radius: 10px;'
+                        *ngIf="active == college.display_url">
+                        <br>
+                        <img src="{{college.icon}}" alt="" style="cursor: pointer;">
+                        <h5 style="cursor: pointer;">
+                            {{college.name_english}}</h5>
+                        <h4>{{college.total}}</h4>
+                    </div>
+
+                    <div *ngIf="active != college.display_url" (click)="getResearchs(college.display_url)">
+                        <br>
+
+                        <img src="{{college.icon}}" alt="" style="cursor: pointer;">
+                        <h5 style="cursor: pointer;">
+                            {{college.name_english}}</h5>
+                        <h4>{{college.total}}</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="div" style="background-color: #f7f7f7; padding: 30px 0">
+    <div class="container">
+
+
+        <div class="staffs">
+            <div class="staff" *ngFor="let staff of staff">
+                <input type="checkbox" [(ngModel)]="staff.filter" (change)="onFilter()">
+                <h5>{{staff.name_english}}</h5>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-6" style="padding-bottom: 20px;">
+                <h5>English Researches</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Auther</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let research of english_researches let i = index" data-toggle="modal"
+                        data-target="#staticBackdropthree" (click)="selectedResearch = research" style="cursor: pointer;">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{research.title}}</td>
+                            <td>{{research.staff.name_english}}</td>
+                            <td>{{research.date.substring(0, 4)}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6" style="padding-bottom: 20px;">
+                <h5>Arabic Researches</h5>
+                <table class="table table-bordered" style="direction: ltr; text-align: right;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Auther</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">#</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let research of arabic_researches let i = index" data-toggle="modal"
+                        data-target="#staticBackdropthree" (click)="selectedResearch = research" style="cursor: pointer;">
+                            <td>{{research.date.substring(0, 4)}}</td>
+                            <td>{{research.staff.name_arabic}}</td>
+                            <td>{{research.title}}</td>
+                            <th scope="row">{{i+1}}</th>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br><br>
+        <p style="text-align: center;">This page designed and developed by Aws alqduah, Ahmad Alhajaj and Ibrahim Tamimi
+        </p>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="staticBackdropthree" tabindex="-1" aria-labelledby="staticBackdropthreeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropthreeLabel">Research</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" *ngIf="selectedResearch">
+
+                <h5  style="text-align: justify;">{{selectedResearch.title}}</h5>
+                <h5>by: {{selectedResearch.staff.name_english}}</h5>
+                <br>
+                <br>
+                <p style="text-align: justify;">{{selectedResearch.description}}</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button *ngIf="selectedResearch && selectedResearch.link" type="button" class="btn btn-warning" (click)="relocate_home()">Read more</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer-en></app-footer-en>

@@ -1,0 +1,30 @@
+<div class="background">
+
+    <div id="logreg-forms">
+        <!-- <div class="title">
+            <h4>نظام أرشفة الكتب الرسمية الخاصة <br> في رئاسة الجامعة</h4>
+        </div> -->
+        <form class="form-signin">
+            <div class="space">
+                <img src="../../../assets/images/AUT.png" alt="">
+
+            </div>
+
+            <input [(ngModel)]="user.username" name="username" type="text" id="inputUsername" class="form-control"
+                placeholder="Username" required="" autofocus="">
+            <input [(ngModel)]="user.password" name="password" type="password" id="inputPassword" class="form-control"
+                placeholder="Password" required="">
+            <hr>
+
+            <!-- <p *ngIf="show"><a href="http://localhost:8000/password_reset/">*هل نسيت كلمة المرور*</a></p> -->
+            <button (click)="login()" class="btn btn-success btn-block" type="submit">Login</button>
+            <!-- <p class="forgot">Forgot your password?</p> -->
+
+
+            <!-- <p class="text">تصميم وإعداد : صافيناز خليفات بإشراف الدكتور إبراهيم الطراونه ( مركز الحاسوب)</p> -->
+
+        </form>
+
+
+    </div>
+</div>

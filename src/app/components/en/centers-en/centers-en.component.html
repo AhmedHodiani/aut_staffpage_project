@@ -1,0 +1,379 @@
+<app-navbar-en></app-navbar-en>
+
+
+
+
+<header>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" *ngIf="center.img_slider_one != null">
+
+
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_one}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_english}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/en/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">Published Researches</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">Certified Journals</a></button>
+                        <!-- <button class="btn btn-warning" routerLink="/en/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">E-Services</button> -->
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_english}}</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_two != null">
+
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_two}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_english}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/en/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">Published Researches</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">Certified Journals</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_english}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_three != null">
+            
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_three}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_english}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/en/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">Published Researches</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">Certified Journals</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_english}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          <div class="carousel-item" *ngIf="center.img_slider_four != null">
+            
+            <div class="background" style="background: url(http://localhost:8000{{center.img_slider_four}});     background-size: cover !important;
+            background-repeat: no-repeat !important;"></div>
+            <div class="mask">
+                <div class="container">
+                    <div class="context typewriter">
+                        <h1><span>{{center.name_english}}</span></h1>
+                        <button class="btn btn-warning" routerLink="/en/scientific-research/published" *ngIf="center.display_url == 'scientific_research'">Published Researches</button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'scientific_research'"><a target="_blank" href="{{journalUrl}}">Certified Journals</a></button>
+                        <button class="btn btn-warning" *ngIf="center.display_url == 'about' || center.display_url == 'presidency'"><a target="_blank" href="{{flipedBook.book}}">{{flipedBook.name_english}}</a></button>
+
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div class="arrow"></div>
+
+    
+</header>
+
+
+
+<div class="about-us-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+                <div class="background"
+                    style="background: url(http://localhost:8000{{center.image}}); background-repeat: no-repeat; background-size: cover; border-radius: 4px;">
+                </div>
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>{{center.name_english}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-boxx">
+                        <span [outerHTML]="center.introduction_paragraph_english"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mission-and-vision">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop mission">
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <h2>Vision</h2>
+                        <span [outerHTML]="center.vision_english"></span>
+                        <h2 style="margin-top: 20px">Mission</h2>
+                        <span [outerHTML]="center.mission_english"></span>
+
+                        <h2 style="margin-top: 20px" *ngIf="center.display_url == 'scientific_research'">Values</h2>
+                        <ul *ngIf="center.display_url == 'scientific_research'">
+                            <li>Ethics of Scientific Research</li>
+                            <li>Originality and creativity</li>
+                            <li>pioneership and innovation</li>
+                            <li>Professionalism and transparency</li>
+                            <li>Cooperation and shared responsibility</li>
+                            <li>High-quality local community service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 prop2 mission">
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <h2>Objectives</h2>
+                        <span [outerHTML]="center.objectives_english"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="Why-choose-us" *ngIf="center.services.length != 0">
+    <div class="container">
+        <div class="why-us Why-choose-p">
+            <div class="row title">
+                <div class="col-md-12 colorlib-heading animate-box">
+                    <h2>Services</h2>
+                    <hr>
+                </div>
+            </div>
+            <span [outerHTML]="center.services_paragraph_english"></span>
+
+            <div class="row context">
+                <div class="col-lg-3 section" *ngFor="let service of center.services">
+                    <div class="icon">
+                        <i class="{{service.icon}} fa-5x circle-icon"></i>
+                    </div>
+                    <h4>{{service.title_english}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dean" *ngIf="center.director != null">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="picture">
+
+                    <img *ngIf="center.director.staffurl == 'nostaff'" src="http://localhost:8000{{center.director.image}}" alt="">
+                    <img *ngIf="center.director.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/en/staff/{{center.director.staffurl}}" src="http://localhost:8000{{center.director.image}}" alt="">
+
+                    <h4>{{center.director.name_english}}</h4>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="prop dirctor">
+                    <span [outerHTML]="center.director_paragraph_english"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background"></div>
+</div>
+
+
+
+
+<div class="staff" *ngIf="center.staffs.length != 0">
+    <div class="container">
+        <h2>Staff</h2>
+        <hr>
+
+        <div class="assistant">
+            <div class="row" *ngIf="center.director_assistant != null">
+                <div class="col-md-12">
+                    <div class="picture">
+                        <img *ngIf="center.director_assistant.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/en/staff/{{center.director_assistant.staffurl}}" src="http://localhost:8000{{ center.director_assistant.image }}" alt="" />
+                        <img *ngIf="center.director_assistant.staffurl == 'nostaff'" src="http://localhost:8000{{ center.director_assistant.image }}" alt="" />
+                        
+                        <h4 style="margin-bottom: 0;">{{ center.director_assistant.name_english }}</h4>
+                        <h4>{{ center.director_assistant.postion_english }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pictures">
+            <div class="row">
+                <div class="col-md-4 pic" *ngFor="let staff of center.staffs">
+                    <img *ngIf="staff.staffurl == 'nostaff'" src="http://localhost:8000{{staff.image}}" alt="">
+                    <img *ngIf="staff.staffurl != 'nostaff'" style="cursor: pointer;" routerLink="/en/staff/{{staff.staffurl}}" src="http://localhost:8000{{staff.image}}" alt="">
+                   
+                    <h4>{{staff.name_english}}</h4>
+                    <h4>{{staff.postion_english}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 
+
+
+<div class="list_requirements_three" *ngIf="center.display_url == 'scientific_research'">
+    <div class="container">
+       
+      
+        <div class="row lists">
+            <div class="col-md-6 list">
+                <h2>Tasks</h2>
+                <p>The dean of the scientific research undertakes the following tasks:</p>
+                <ul>
+                    <li>Preparing the annual budget for the Deanship of Scientific Research</li>
+                    <li>Implementation of the University's policy of scientific research in terms of organization,
+                        support and publication.</li>
+                    <li>Seeking funding sources for scientific research from within and outside the university.</li>
+                    <li>Collecting information on scientific research projects conducted at the university, and
+                        following them up.</li>
+                    <li>Contacting centers and institutions related to scientific research within and outside the
+                        Kingdom and coordinating with them.</li>
+                    <li>Providing periodic reports on scientific research conducted at the university.</li>
+                    <li>Any other matters related to scientific research.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 list">
+                <h2>The Achievements of the Deanship</h2>
+                <ul>
+                    <li>Preparing the instructions and pillars of scientific research projects.</li>
+                    <li>Preparing the instructions of attending refereed scientific conferences.</li>
+                    <li>Preparing the instructions of publication in specialized refereed scientific journals.</li>
+                    <li>Preparing the instructions of giving rewards for faculty members in exchange for publishing
+                        research in international journals with high Impact Factor.</li>
+                    <li>Development of scientific research models to be compatible with the requirements of quality
+                        assurance in the university in all areas related to scientific research.</li>
+                    <li>Building a database of the funded scientific research projects and the researches published in
+                        specialized refereed scientific journals and conferences.</li>
+                    <li>Increasing the means of cooperation and communication with all the sides interested in
+                        scientific research within Jordan, such as universities, the Higher Council for Science and
+                        Technology, and Scientific Research Support Fund, and Support to Research, Technological
+                        Development and Innovation in Jordan (SRTD II).</li>
+                    <li>Increasing the means of cooperation with regional and international parties interested in
+                        scientific research, such as " European Union, the Arab network for scientific research, and the
+                        Federation of Arab universities, and The Federation of the Universities of the Islamic World ".
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- 
+
+<div class="list_requirements_two" *ngIf="center.display_url == 'scientific_research'">
+    <div class="container">
+      
+        
+        <div class="row lists">
+            <div class="col-md-6 list">
+                <h2>The Board of Scientific Research</h2>
+                <p>The Council supervises the scientific research and scientific publication, and it is headed by the
+                    Dean of Scientific Research. The Council includes representatives of the various faculties at the
+                    university and representatives of the local community with competence and experience, The Scientific
+                    Research Council undertakes the following tasks:</p>
+                <ul>
+                    <li>Proposing the general policy for scientific research priorities at the university and their
+                        means of implementation.</li>
+                    <li>Developing the plan of scientific research project and the pillars of cooperation and
+                        coordination with other relevant scientific research institutions.</li>
+                    <li>Preparing the necessary instructions for organizing the affairs of scientific research,
+                        including its promotion, coordination, support, follow-up, evaluation, and publishing.</li>
+                    <li>Developing and implementing the necessary conditions and terms for keeping the university's
+                        rights and researchers' rights of the scientific research whether singly conducted at the
+                        university or in cooperation with others from outside the university</li>
+                    <li>Discussing the budget of the scientific research and recommending its inclusion in the
+                        university's budget.</li>
+                    <li>Recommendation to fund the publication of valuable research and publishing translated,
+                        evaluated, and written manuscripts.</li>
+                    <li>Examination and approval of scientific research projects.</li>
+                    <li>Endorsing the annual report of the Deanship of Scientific Research.</li>
+                    <li>Considering any other matters related to scientific research</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 list">
+                <h2>Translation and Publication</h2>
+                <p>The Deanship of Scientific Research supervises the preparation of regulations and instructions of
+                    funding the scientific research published in the university. The Deanship receives researches,
+                    books, and translated studies and then evaluates and prepares them for publication within a certain
+                    mechanism to ensure the rights of the university on the one hand and the rights of authors on the
+                    other hand.</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<app-footer-en></app-footer-en>

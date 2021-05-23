@@ -1,0 +1,243 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>خدمات الطلبة</span></h1>
+
+                <button *ngIf="examsSchedule" class="btn btn-warning"><a target="_blank" href="{{examsSchedule}}">جدول الامتحانات النهائي</a></button>
+                <button *ngIf="courseSchedule" class="btn btn-warning"><a target="_blank" href="{{courseSchedule}}">الجدول الدراسي</a></button>
+                <button class="btn btn-warning"><a target="_blank" href="http://edugate.aut.edu.jo/Edugate/">التسجيل الالكتروني</a></button>
+                <button class="btn btn-warning"><a target="_blank" href="http://lms.aut.edu.jo/">التعليم الألكتروني</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="about-us-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                    style="height: 100%; width: 100%;">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background"
+                                style="background-image: url({{library[0].img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;"
+                            *ngFor="let img of library.slice(1)">
+                            <div class="background"
+                                style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>المكتبة</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p" style="text-align : justify;"><strong>تقع مكتبة الجامعة في الطابق الأول للمبنى التعليمي الرئيس في الجامعة، وهي
+                                مكتبة واسعة مساحتها حوالي 1200 مترٍ مربع ويتوسطها واجهات زجاجية تطل على حديقة داخلية
+                                ويدخلها الضوء الطبيعي، وتتسع المكتبة لحوالي 350 طالبًا في وقت واحد.</strong></p>
+
+                        <p style="text-align : justify;">تضم مقتنيات المكتبة حوالي 29000 قطعة من كتب ودوريات ومراجع وموسوعات، والعمل جاري على توسعة
+                            مقتنيات المكتبة لدعم التخصصات الجديدة التي تستحدث في الجامعة، ويتوفر في المكتبة في الوقت
+                            الحالي مراجع في العلوم الطبيعية والإنسانية وتكنولوجيا المعلومات والعلوم الإدارية والمالية
+                            والهندسة والصيدلة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="about-us-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>الرياضة</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p"><strong>تهتم جامعة العقبة للتكنولوجيا بالرياضة ويتوفر فيها المرافق الرياضية
+                                الآتية:</strong></p>
+
+                        <ul>
+                            <li>صالة رياضية مساحتها حوالي 1000 متر مربع يمكن ممارسة رياضات التنس الأرضي وكرة الطائرة
+                                وكرة السلة وكرة اليد فيها، كما يوجد في هذه الصالة غرف للغيار وحمامات وشورات.</li>
+                            <li>ملعب خارجي لكرة القدم مع مدرج.</li>
+                            <li>ستة ملاعب سلة خارجية.</li>
+                            <li>ثلاثة ملاعب كرة يد خارجية.</li>
+                            <li>ثلاثة ملاعب تنس أرضي خارجية.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 space">
+                <div id="carouselExampleIndicatorstwo" class="carousel slide" data-ride="carousel"
+                    style="height: 100%; width: 100%;" *ngIf="sports != []">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background"
+                                style="background-image: url({{sports[0].img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;"
+                            *ngFor="let img of sports.slice(1)">
+                            <div class="background"
+                                style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorstwo" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorstwo" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="about-us-three">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 space">
+                <div id="carouselExampleIndicatorsthree" class="carousel slide" data-ride="carousel"
+                    style="height: 100%; width: 100%;" *ngIf="buildings != []">
+                    <div class="carousel-inner" style="height: 100%; width: 100%;">
+
+                        <div class="carousel-item active" style="height: 100%; width: 100%;">
+                            <div class="background"
+                                style="background-image: url({{buildings[0].img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height: 100%; width: 100%;"
+                            *ngFor="let img of buildings.slice(1)">
+                            <div class="background"
+                                style="background-image: url({{img.img_slider}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicatorsthree" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>سكن الطلبة</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p class="p" style="text-align : justify;"><strong>لأن جامعة العقبة للتكنولوجيا تهتم بالطلبة من خارج مدينة العقبة، فقد
+                                أنشأت
+                                إسكانات داخلية للطلاب والطالبات. يتسع سكن الطلاب 328 طالبًا، ويحتوي على غرف واسعة
+                                مطلة
+                                على البحر داخل الجامعة. أما سكن الطالبات فيتسع 264 طالبة، ويحتوي على غرف واسعة في
+                                منطقة
+                                آمنة داخل الجامعة خاصة بالطالبات.</strong></p>
+
+                        <ul>
+                            <li>كل غرفة هي غرفة ماستر (مع حمام خاص وشور)</li>
+                            <li>تحتوي كل غرفة على سريرين وخزانة ملابس ومكاتب للدراسة وكرسيين وثلاجة صغيرة ومجلى مزود
+                                بالمياه الباردة والساخنة.</li>
+                            <li>يوجد مطابخ مشتركة وغرف تناول طعام وغرف مطالعة وغرف تلفاز.</li>
+                            <li>يوجد في الجامعة مطعم رئيسي يقدم ثلاث وجبات في اليوم ومتجر وكافتيريا ومصبغة.</li>
+                            <li>التكلفة المالية الشهرية للغرفة المزدوجة 100 دينار أردني للطالب الواحد.</li>
+                            <li>يتوفر غرف منفردة ذات سرير واحد ويتم فتحها حسب الطلب وتكلفتها 160 دينارًا.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about-us-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 prop">
+                <div class="row">
+                    <div class="col-md-12 colorlib-heading animate-box">
+                        <h2>المواصلات</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        <p style="text-align : justify;">توفر الجامعة باصات لنقل الطلبة من مدينة العقبة إلى الجامعة، حيث تنطلق هذه
+                            الباصات من الساحة المجاورة لفندق الزعتري قرب مجمع باصات العقبة على شارع الملك طلال في
+                            مدينة العقبة إلى الجامعة وبالعكس في أوقات تُحدد حسب الفصل الدراسي وتتغير من فصل لآخر حسب
+                            كثافة الحركة، وتستغرق الرحلة بين الجامعة والعقبة حوالي ثلث الساعة.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 space">
+                <div class="background"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer-ar></app-footer-ar>

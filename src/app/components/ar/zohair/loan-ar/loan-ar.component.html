@@ -1,0 +1,88 @@
+<app-navbar-ar></app-navbar-ar>
+
+
+<header>
+    <div class="background"></div>
+    <div class="mask">
+        <div class="container">
+            <div class="context typewriter">
+                <h1><span>التقديم على قرض  برنامج الدكتور زهير السباعي</span></h1>
+            </div>
+        </div>
+    </div>
+    <div class="arrow"></div>
+</header>
+
+
+
+<div class="form">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label>الأسم الكامل</label>
+                        <input [(ngModel)]="name" name="name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الطالب</label>
+                        <input [(ngModel)]="student_id" name="student_id" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input [(ngModel)]="phone" name="phone" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">الملفات</label>
+                        <input type="file" class="form-control-file" name="document_one" (change)="onChangeOne($event)">
+                    </div>
+                    <p> الملفات المطلوبه </p>
+                    <ul>
+                        <li>   صوره عن دفتر العائلة - صوره عن عقد الايجار او فاتوره كهرباء او ماء</li>
+                        <li> إثبات دخل الاسرة - كشف ضمان الاب, كشف ضمان الام, كشف ضمان المتقدم</li>
+                    </ul>
+                    <p>يجب أن تكون الملفات المرفقه مضغوطه في ملف واحد </p>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label>التخصص</label>
+                        <input [(ngModel)]="major" name="major" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1"> معدل دخل الأسرة (بالدينار الاردني)</label>
+                        <select [(ngModel)]="avg_income" name="avg_income" class="form-control" id="exampleFormControlSelect1">
+                           
+                            <option>200 - 400</option>
+                            <option>400 - 600</option>
+                            <option>600 - 800</option>
+                            <option>اعلى من 800.</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>عدد افراد الأسرة في العائلة</label>
+                        <input [(ngModel)]="family_members" name="family_members" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>المعدل التراكمي</label>
+                        <input [(ngModel)]="gpa" name="gpa" type="text" class="form-control">
+                    </div>
+
+                    <p *ngIf="show_true" style="color: rgb(36, 179, 67); font-size: 20px; text-align: left; font-weight: bold;">تم أرسال طلب المنحة بنجاح</p>
+                    <p *ngIf="show_false" style="color: rgb(179, 36, 36); font-size: 20px; text-align: left; font-weight: bold;">الرجاء تعبئة كافة الحقول</p>
+                    <button (click)="onSubmit()" type="submit" class="btn btn-warning">أرسال</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<app-footer-ar></app-footer-ar>
